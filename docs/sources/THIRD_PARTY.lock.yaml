@@ -1,0 +1,24 @@
+schema_version: 1
+repositories:
+  - name: IntelligentCar_Baidu
+    role: reference_only
+    status: REFERENCE_ONLY
+    remote_url: "https://github.com/0Leeeezy0/IntelligentCar_Baidu.git"
+    local_path: "third_party/IntelligentCar_Baidu"
+    branch: master
+    commit_sha: "be05851d04154d374e46687e10809e13e997f712"
+    commit_time: "2025-02-05T21:28:04+08:00"
+    commit_subject: "update README.md for bilibili"
+    remote_tag_ref_count: 0
+    submodules:
+      gitmodules_present: false
+    git_lfs:
+      lfs_attributes_found: false
+      notes: "仓库中未发现包含 filter=lfs 的 .gitattributes；未据此推断远端历史中的其他状态。"
+    license:
+      root_license_files: []
+      status: UNVERIFIED
+    tracked_file_count: 281
+    worktree_clean_after_clone: true
+    clone_command: "git -c core.longpaths=true clone --no-tags https://github.com/0Leeeezy0/IntelligentCar_Baidu.git third_party/IntelligentCar_Baidu"
+    notes: "远端 tag 只读查询返回 0 个 ref。因沙箱与克隆进程账户不同，后续只对单条 Git 命令传入 safe.directory，未修改全局 Git 配置。"

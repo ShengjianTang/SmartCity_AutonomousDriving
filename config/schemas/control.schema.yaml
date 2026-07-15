@@ -1,0 +1,36 @@
+schema_version: 1
+entity: control
+status: BLOCKED
+fields:
+  steering_center_command:
+    type: [number, "null"]
+    value: null
+    source_required: "实车舵机中值标定"
+  steering_left_limit_command:
+    type: [number, "null"]
+    value: null
+    source_required: "实车机械限位标定"
+  steering_right_limit_command:
+    type: [number, "null"]
+    value: null
+    source_required: "实车机械限位标定"
+  steering_angle_map_file:
+    type: [string, "null"]
+    value: null
+    source_required: "控制值到前轮转角实测映射"
+  motor_speed_map_file:
+    type: [string, "null"]
+    value: null
+    source_required: "电机控制值到实际速度实测映射"
+  controller_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "版本化实车标定和验证记录"
+  braking_calibration_file:
+    type: [string, "null"]
+    value: null
+    source_required: "真实制动距离测量"
+  command_limits:
+    type: [object, "null"]
+    value: null
+    source_required: "执行器手册和安全标定"

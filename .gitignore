@@ -1,0 +1,72 @@
+# Local Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Build outputs
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Testing/
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exe
+
+# Editors and operating-system files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Runtime output and temporary downloads
+logs/runtime/
+tmp/
+*.part
+*.failed-*.part
+*.tmp
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Large/raw data, device recordings, caches, and model artifacts
+data/raw/**
+data/processed/**
+data/replay/**
+data/**/*.mp4
+data/**/*.avi
+data/**/*.mkv
+data/**/*.bag
+training_cache/
+models/**/*.onnx
+models/**/*.pt
+models/**/*.pth
+models/**/*.engine
+models/**/*.bin
+models/**/*.weights
+
+# Organizer drops may contain large or restricted files; keep instructions only.
+official/organizer_drop/maps/**
+official/organizer_drop/hardware/**
+official/organizer_drop/sdk/**
+official/organizer_drop/examples/**
+official/organizer_drop/datasets/**
+official/organizer_drop/models/**
+official/organizer_drop/notices/**
+
+# Audited third-party checkout is version-locked separately and is not vendored.
+third_party/IntelligentCar_Baidu/
+
+# User-provided root copy is byte-identical to the locked official copy.
+/11智慧城市无人驾驶算法应用赛.pdf

@@ -1,0 +1,28 @@
+2026-07-15T19:38:50+08:00 environment audit: workspace initially contained 11智慧城市无人驾驶算法应用赛.pdf; Git repository absent; exit=0
+2026-07-15T19:39:00+08:00 sandbox network HEAD checks: GitHub and aicomp unreachable inside isolated sandbox; diagnostic result retained
+2026-07-15T19:40:00+08:00 authorized read-only host/network audit: Windows 11 x64; 15010131968 bytes free memory; GitHub HTTP 200; aicomp HTTP 200; exit=0
+2026-07-15T19:40:00+08:00 git init; exit=0
+2026-07-15T19:40:30+08:00 create required directory structure (71 directories); exit=0
+2026-07-15T19:41:44+08:00 download track_4548.html with HTTP/content validation and atomic replace; 17471 bytes; exit=0
+2026-07-15T19:42:22+08:00 download official rules PDF to temporary file; HTTP/content/magic validation passed; Poppler wrapper invocation failed before replace; exit=1; see download_rules_pdf_error.log
+2026-07-15T19:43:43+08:00 recover PDF validation with direct Poppler executable plus pypdf; 8 pages; 776654 bytes; atomic replace; exit=0
+2026-07-15T19:44:00+08:00 render all 8 PDF pages with pdftoppm and visually inspect each page; exit=0
+2026-07-15T19:47:00+08:00 python -m venv .venv; Python 3.12.7; exit=0
+2026-07-15T19:50:00+08:00 run download_public_sources.py idempotency check; two locked files kept; exit=0
+2026-07-15T19:51:00+08:00 git clone --no-tags IntelligentCar_Baidu; 281 files; exit=0
+2026-07-15T19:52:00+08:00 third-party Git metadata query initially rejected dubious ownership; no global config changed; per-command safe.directory used thereafter
+2026-07-15T19:53:00+08:00 lock third-party commit be05851d04154d374e46687e10809e13e997f712; remote tags=0; worktree clean; exit=0
+2026-07-15T19:54:00+08:00 install pypdf 6.10.0 and pdfplumber 0.11.9 into project .venv; exit=0
+2026-07-15T19:55:32+08:00 extract_rules_by_page.py; pages=8; OCR not used; exit=0
+2026-07-15T20:18:00+08:00 complete third-party static and license audit without modifying its worktree; exit=0
+2026-07-15T20:24:00+08:00 cmake -S . -B build -DBUILD_TESTING=ON; cmake command not found; exit=1
+2026-07-15T20:25:00+08:00 audit_new_official_materials.py; scanned=0; pending=0; exit=0
+2026-07-15T20:26:00+08:00 install PyYAML 6.0.3 into project .venv; exit=0
+2026-07-15T20:27:00+08:00 parse 9 YAML files and 31-row requirement CSV; exit=0
+2026-07-15T20:31:00+08:00 required artifact audit: 50 checked, 0 missing; Python compileall exit=0
+2026-07-15T20:32:00+08:00 third-party integrity audit: locked commit unchanged, worktree clean, Kesci checkout absent; exit=0
+2026-07-15T20:33:00+08:00 Git content audit: 69 unignored project files, 0 files over 5 MiB, root duplicate PDF and third-party checkout ignored; exit=0
+2026-07-15T20:34:00+08:00 credential pattern audit: 0 matches; first-party high-risk English term audit: 0 matches; exit=0
+2026-07-15T20:35:00+08:00 final source verification: HTML/PDF hashes match lock, PDF magic valid, Poppler pages=8, rendered pages=8; exit=0
+2026-07-15T22:59:31+08:00 pre-integration audit: branch=master; commit=UNBORN; untracked formal project tree retained; organizer files=34; user raw files=33; raw bytes=22960347578; exit=0
+2026-07-15T23:00:00+08:00 verify organizer raw directories are ignored by Git; sample icar_autopilot_2025th.zip matched .gitignore line 63; exit=0

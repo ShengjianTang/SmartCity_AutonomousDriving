@@ -1,0 +1,29 @@
+schema_version: 1
+sources:
+  - name: aicomp_track_4548
+    type: official_webpage
+    url: "https://www.aicomp.cn/tracks/4548.html"
+    final_url: "https://www.aicomp.cn/tracks/4548.html"
+    downloaded_at: "2026-07-15T11:41:44Z"
+    local_path: "official/public/webpages/track_4548.html"
+    sha256: "8ebbfc4e95cf0cf22e0752499239d8302e11d1a73085b8e9cbb7d18c9bdc8f7f"
+    http_status: 200
+    content_type: "text/html; charset=UTF-8"
+    size_bytes: 17471
+    validation_status: VERIFIED
+    notes: "HTTP 200；非空；检测到 HTML 文档结构。"
+  - name: smart_city_driverless_official_rules
+    type: official_rule_pdf
+    url: "https://www.aicomp.cn/wp-content/uploads/2026/06/11%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82%E6%97%A0%E4%BA%BA%E9%A9%BE%E9%A9%B6%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E8%B5%9B.pdf"
+    final_url: "https://www.aicomp.cn/wp-content/uploads/2026/06/11%E6%99%BA%E6%85%A7%E5%9F%8E%E5%B8%82%E6%97%A0%E4%BA%BA%E9%A9%BE%E9%A9%B6%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8%E8%B5%9B.pdf"
+    downloaded_at: "2026-07-15T11:42:22Z"
+    verified_at: "2026-07-15T11:43:43Z"
+    local_path: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    sha256: "41cd80412a740049f15bf02bc9f9ea28b9b89f96af1d8a4335fb750f98c03988"
+    http_status: 200
+    content_type: "application/pdf"
+    size_bytes: 776654
+    pdf_pages: 8
+    extractable_text_pages: 8
+    validation_status: VERIFIED
+    notes: "文件头为 %PDF-；pypdf 与 Poppler 均解析为 8 页；逐页渲染目视检查通过。根目录原有 PDF 与此文件 SHA-256 相同。"

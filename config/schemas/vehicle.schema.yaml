@@ -1,0 +1,35 @@
+schema_version: 1
+entity: vehicle
+status: BLOCKED
+official_constraints:
+  source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf#page=1"
+  final_length_mm: {minimum: 305, maximum: 325}
+  final_width_mm: {minimum: 180, maximum: 200}
+  final_height_mm: {minimum: 330}
+  tire_nominal_diameter_mm: 64
+  tire_nominal_width_mm: 26
+fields:
+  chassis_model:
+    type: [string, "null"]
+    value: null
+    source_required: "官方赛具清单或实物铭牌"
+  wheelbase_mm:
+    type: [number, "null"]
+    value: null
+    source_required: "实车测量记录"
+  track_width_mm:
+    type: [number, "null"]
+    value: null
+    source_required: "实车测量记录"
+  measured_tire_diameter_mm:
+    type: [number, "null"]
+    value: null
+    source_required: "实车测量记录"
+  encoder_present:
+    type: [boolean, "null"]
+    value: null
+    source_required: "硬件手册或实物检查"
+  geometry_calibration_file:
+    type: [string, "null"]
+    value: null
+    source_required: "车辆几何标定记录"

@@ -1,0 +1,40 @@
+schema_version: 1
+entity: perception
+status: BLOCKED
+fields:
+  class_definitions_file:
+    type: [string, "null"]
+    value: null
+    source_required: "官方数据集标签或最终实物类别审计"
+  model_file:
+    type: [string, "null"]
+    value: null
+    source_required: "官方模型或可追溯训练产物"
+  model_sha256:
+    type: [string, "null"]
+    value: null
+    source_required: "模型文件哈希"
+  model_format:
+    type: [string, "null"]
+    value: null
+    source_required: "官方 AI SDK 支持列表"
+  input_width_pixels:
+    type: [integer, "null"]
+    value: null
+    source_required: "模型元数据和转换记录"
+  input_height_pixels:
+    type: [integer, "null"]
+    value: null
+    source_required: "模型元数据和转换记录"
+  confidence_thresholds:
+    type: [object, "null"]
+    value: null
+    source_required: "固定验证集评估和任务风险分析"
+  temporal_filter_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "真实车载视频回放评估"
+  lane_calibration_file:
+    type: [string, "null"]
+    value: null
+    source_required: "相机/车道标定记录"

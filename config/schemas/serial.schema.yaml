@@ -1,0 +1,36 @@
+schema_version: 1
+entity: vehicle_transport
+status: BLOCKED
+fields:
+  device:
+    type: [string, "null"]
+    value: null
+    source_required: "官方计算单元接口说明和真实设备枚举"
+  baud_rate:
+    type: [integer, "null"]
+    value: null
+    source_required: "官方串口协议"
+  data_bits:
+    type: [integer, "null"]
+    value: null
+    source_required: "官方串口协议"
+  parity:
+    type: [string, "null"]
+    value: null
+    source_required: "官方串口协议"
+  stop_bits:
+    type: [number, "null"]
+    value: null
+    source_required: "官方串口协议"
+  frame_specification:
+    type: [string, "null"]
+    value: null
+    source_required: "官方协议文档或官方 MCU 工程"
+  command_timeout_ms:
+    type: [integer, "null"]
+    value: null
+    source_required: "官方协议与实车安全测试"
+  emergency_stop_message:
+    type: [string, "null"]
+    value: null
+    source_required: "官方安全接口与实车验证"

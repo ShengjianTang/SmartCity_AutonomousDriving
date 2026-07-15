@@ -1,0 +1,32 @@
+Requirement ID,Official statement,Source file,Source page,Category,Planned module,Input,Output,Verification method,Current status,Blocking dependency,Notes
+FORMAT-001,"比赛分四阶段，具体形式和赛制以组委会后续文件为准",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,赛制,文档/项目状态,组委会通知,赛制记录,对照后续盖章或官网文件,VERIFIED,后续赛制文件仍待发布,"已验证当前规则表述，不代表后续赛制已确定"
+PLATFORM-001,"平台应实现图像识别、处理、车辆控制和自动驾驶",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,平台,系统集成,实车硬件与软件,合规演示,实车合规检查与场地测试,BLOCKED,"官方赛具、实车、接口",未声称已实现
+COMPUTE-001,"计算单元为 8 核、4×2.0GHz+4×1.8GHz、DDR4 4GB、3.2Tops，模型须在其上运行",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,平台,OfficialInferenceBackend,"目标计算单元、模型",板端推理证据,型号资料核对与板端运行记录,BLOCKED,"计算单元型号、系统、SDK、模型",不由规格推断具体产品
+CONTROL-001,"单片机须与计算单元通信，控制鸣笛，且直接控制舵机和电机",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,控制,VehicleTransport/MCU,"MCU 工程、协议、执行器",控制命令与反馈,"接线审计、协议测试、实车测试",BLOCKED,"MCU、协议、执行器资料",型号不限不等于已有接口
+SENSOR-001,使用直接连接计算单元的彩色摄像头,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,感知,CameraBackend,相机与官方接口,彩色图像帧,"硬件枚举、采集记录",BLOCKED,"相机型号、接口、驱动",分辨率和设备节点未知
+VEHICLE-001,"车模须满足底盘、悬挂、阿克曼转向、后驱差速、防撞和外壳要求",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,平台,合规检查,实际车模,检查记录,尺寸/结构实物检查,BLOCKED,赛具与硬件手册,不从第三方车模推断
+MOTOR-001,"直流高速电机，12V，空载转速不高于 12000rpm",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,控制,MotorBackend,电机铭牌与手册,合规记录,手册核对和实物测量,BLOCKED,电机型号与手册,未设置 PWM 参数
+SERVO-001,"数字舵机满足规则给出的速度、角度和堵转扭力限制",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,控制,SteeringController,舵机手册与标定,合规/标定记录,手册核对与实车标定,BLOCKED,"舵机型号、控制方式",中值和极限未知
+TIRE-001,"橡胶轮胎直径 64mm、宽 26mm",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,平台,合规检查,实物轮胎,测量记录,卡尺测量并留档,BLOCKED,实际车模,"规则尺寸已知，实物符合性未知"
+POWER-001,"锂电池标称不高于 11.1V、放电倍率不高于 25C、容量不高于 2200mAh",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,平台/安全,电源安全,电池铭牌与手册,合规记录,"铭牌、手册和安全检查",BLOCKED,实际电池,未选择具体电池
+DIMENSION-001,"最终车辆长 305-325mm、宽 180-200mm、高不低于 330mm",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1,平台,合规检查,完整车辆,尺寸记录,实物测量,BLOCKED,完整实车,未填写实测值
+FIELD-001,"场地约 4.5m×4.0m、赛道宽 350-450mm，最终图纸赛期发布",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,1-2,场地,地图/配置,官方最终图纸,场地模型,对照赛期文件和现场复核,BLOCKED,"最终地图、布局、物料",范围没有转成固定值
+TASK-LAPS-001,"四轮在赛道，从起终点前 1m 范围出发并运行 2 圈",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,2,决策,DecisionStateMachine,起终点与圈计数输入,任务周期状态,真实赛道两圈测试,BLOCKED,"感知、地图、实车",计时以过起终点为边界
+TASK-SPEED-001,两测速感应器间速度小于 0.5m/s,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,"3,5",规划/控制,SpeedPlanner,"测速区边界、速度反馈",限速控制请求,赛具传感器与实车速度记录,BLOCKED,"测速区实物、速度反馈、标定","0.5m/s 为规则阈值，不是控制参数"
+TASK-PARK-001,"停车标志时入位、四轮在同一车位、停留后驶出；绿色标志直行",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,"3,5",决策/规划,Parking states/LocalPlanner,"标志、车位、车体定位",停车任务状态,实景视频和裁判标准核验,BLOCKED,"标志数据、车位图、实车标定","停留片刻无数值，不编造时间"
+TASK-CROSSWALK-001,"到达斑马线按信号牌指示；停车标志时越线后停，绿色时直行",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,3,决策,Crosswalk states,"斑马线与信号状态",停车/通行语义,真实元素回放和实车验证,BLOCKED,"类别、数据、停车标定",触发距离未知
+TASK-BARRIER-001,道闸处停车等待横杆抬起后通过,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,"4,5",决策,Barrier states,道闸状态,等待/通行语义,真实道闸视频与实车测试,BLOCKED,"道闸样式、状态数据、停车标定",无触发距离
+TASK-CONSTRUCTION-001,"施工标志时进入施工道路并避障，绿色标志时直行",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,"4,5",感知/规划,Construction states/LocalPlanner,"标志、锥桶/障碍位置",避障路径语义,真实物料回放与场地测试,BLOCKED,"最终样式、数据、车辆几何",不设置经验避障参数
+TASK-PEDESTRIAN-001,识别行人并正确避障,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,"4,5",感知/规划,Pedestrian states,行人感知,避障行为语义,真实人偶数据与实车测试,BLOCKED,"类别定义、数据、模型、标定",无置信度或距离阈值
+TASK-FORK-001,岔路口按指示选择左或右道路,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,"4,5",决策/规划,Fork states/LocalPlanner,岔路指示,路径分支,最终图纸回放和场地测试,BLOCKED,"指示样式、地图、定位",不预设分支触发点
+TASK-FINISH-001,识别终点线并正确停车,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,5,决策/控制,Finish states,"终点线感知、圈数",停止语义,两圈实车测试,BLOCKED,"终点数据、停车标定、控制接口",未实现实车急停/制动
+SAFETY-001,碰撞固定设施或两轮同时出界每次扣 10 分,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,6,安全,SafetySupervisor,边界/碰撞证据,"安全停止请求、违规日志",回放测试加裁判记录,BLOCKED,"边界感知、碰撞信号、实车",仅设计接口
+SAFETY-002,"两轮出界超 5 秒、三轮出界、失能/失控或违规触车将直接结束",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,6,安全,SafetySupervisor,"出界持续时间、车辆健康、裁判事件",终止语义,纯逻辑测试后再实车验证,BLOCKED,"可靠状态输入、控制接口",5 秒为官方规则数值
+FLOW-OFFLINE-001,"线下任务共 10 分钟；重试得分清零、扣分保留、计时不停",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,6,流程,赛事记录,"裁判计时、重试事件",计分记录,对照裁判记录,VERIFIED,具体赛区通知仍待发布,当前只确认规则流程
+SCORING-001,七个任务按表 2 计分,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,5,评分,验证报告,裁判任务记录,分数证据,逐项对照表 2,VERIFIED,无,不用单元测试冒充裁判得分
+REPORT-001,技术报告按任务分析/算法优化/团队工作/应用展望计 20/40/20/20,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,5,汇报,docs/reports,项目证据,汇报材料,评委评分,NOT_STARTED,团队实际工作与结果,不虚构性能
+RANK-ONLINE-001,线上最终排名为视频演示排名 65% 加技术汇报排名 35%,official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,6,评分,文档,官方排名,排名记录,对照组委会成绩,VERIFIED,无,"是排名加权，不是分数直接加权"
+SUBMISSION-VIDEO-001,"视频一镜到底，不剪辑、不加速，画面声音清晰稳定，1080P",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,7,提交,验证报告,真实比赛视频,合规视频,人工检查原视频属性与连续性,NOT_STARTED,"实车、场地、录制",不创建演示假视频
+SUBMISSION-CONTENT-001,"视频包含车模、计时、任务、判分口播和最终用时等内容",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,7,提交,验证报告,真实比赛执行,视频证据包,提交前检查表,NOT_STARTED,实车比赛执行,仅一轮线上演示
+SUBMISSION-001,"每队提交一次；链接有效且无提取码；同目录不压缩并按规则命名",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,7-8,提交,发布清单,"视频、PPT",提交包,"人工检查命名、链接和时间",NOT_STARTED,"组委会提交窗口、最终材料","逾期或命名错误无效"
+FIELD-FINAL-001,"线下最终场地以组委会为准，可能与示意图不同，机器人须适应提供的场地物料",official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf,8,场地,地图/验证,赛期场地与物料,最终合规记录,现场核对,BLOCKED,赛期场地与物料,示意图仅参考

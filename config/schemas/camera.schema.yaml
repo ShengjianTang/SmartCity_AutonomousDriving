@@ -1,0 +1,35 @@
+schema_version: 1
+entity: camera
+status: BLOCKED
+evidence:
+  official_requirement: "彩色摄像头且直接连接计算单元"
+  source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf#page=1"
+fields:
+  model:
+    type: [string, "null"]
+    value: null
+    source_required: "官方摄像头手册或实际设备铭牌/枚举"
+  width_pixels:
+    type: [integer, "null"]
+    value: null
+    source_required: "官方接口说明和真实采集验证"
+  height_pixels:
+    type: [integer, "null"]
+    value: null
+    source_required: "官方接口说明和真实采集验证"
+  fps:
+    type: [number, "null"]
+    value: null
+    source_required: "目标板真实采集测量"
+  pixel_format:
+    type: [string, "null"]
+    value: null
+    source_required: "官方接口说明或设备枚举"
+  device:
+    type: [string, "null"]
+    value: null
+    source_required: "目标计算单元设备探测"
+  calibration_file:
+    type: [string, "null"]
+    value: null
+    source_required: "实际相机内外参标定记录"

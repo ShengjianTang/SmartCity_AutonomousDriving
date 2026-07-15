@@ -1,0 +1,37 @@
+schema_version: 1
+entity: mission
+status: BLOCKED
+official_constraints:
+  source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+  laps: {value: 2, source_page: 2}
+  speed_zone_max_mps: {value: 0.5, source_page: 5}
+  offline_task_duration_minutes: {value: 10, source_page: 6}
+fields:
+  start_line_confirmation:
+    type: [object, "null"]
+    value: null
+    source_required: "真实起终点数据与圈计数验证"
+  task_trigger_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "最终地图、真实元素数据和回放评估"
+  parking_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "真实车位和实车停车标定"
+  barrier_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "真实道闸数据和停车标定"
+  construction_avoidance_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "最终物料、车辆几何和实车验证"
+  pedestrian_avoidance_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "真实人偶数据和实车安全验证"
+  finish_stop_parameters:
+    type: [object, "null"]
+    value: null
+    source_required: "终点数据、圈计数和制动标定"

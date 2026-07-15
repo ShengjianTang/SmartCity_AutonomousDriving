@@ -1,0 +1,122 @@
+schema_version: 1
+facts:
+  - fact_id: SOURCE-PDF-001
+    statement: "官网下载规则文件可由 pypdf 与 Poppler 解析为 8 页，全部页面有内嵌可提取文本。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "文件级 SHA-256 与解析记录；docs/sources/SOURCES.lock.yaml"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "SHA-256 41cd80412a740049f15bf02bc9f9ea28b9b89f96af1d8a4335fb750f98c03988；未使用 OCR。"
+  - fact_id: RULE-FORMAT-001
+    statement: "比赛分校赛、省赛、总决赛预选赛、全国总决赛四阶段，具体形式待组委会通知。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 1 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "后续赛制文件未获得。"
+  - fact_id: RULE-COMPUTE-001
+    statement: "规则给出计算单元核数、频率组合、DDR4 4GB 和 3.2Tops 要求，但未给具体型号、系统和 SDK。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 1 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "不得由规格反推产品。"
+  - fact_id: RULE-CONTROL-001
+    statement: "控制单元为型号不限的单片机，须与计算单元通信，并直接控制鸣笛装置、舵机和电机。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 1 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "MCU 型号和通信协议未知。"
+  - fact_id: RULE-CAMERA-001
+    statement: "规则只确认彩色摄像头且直接连接计算单元。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 1 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "型号、分辨率、帧率、接口和设备节点未知。"
+  - fact_id: RULE-VEHICLE-001
+    statement: "规则给出车模结构、电机、舵机、轮胎、电池和最终尺寸的合规范围或约束。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 1 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "实际赛具符合性尚未测量。"
+  - fact_id: RULE-FIELD-001
+    statement: "场地约 4.5m×4.0m、赛道宽 350mm-450mm，详细图纸和最终样式待赛期发布。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 1-2、8 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "图 1 不是最终布局。"
+  - fact_id: RULE-LAPS-001
+    statement: "车辆从起终点前 1m 范围内出发，运行 2 圈，并以驶过起终点作为计时边界。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 2、7 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "实车两圈能力未验证。"
+  - fact_id: RULE-TASKS-001
+    statement: "规则列出测速、停车、斑马线/信号、道闸、施工区/锥桶、行人、岔路和终点等任务语义。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 2-5 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "没有提供感知类别清单、阈值、训练数据或控制参数。"
+  - fact_id: RULE-SPEED-001
+    statement: "两个测速感应器之间行驶速度小于 0.5m/s 是测速响应得分条件。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 5 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "该数值不是电机控制参数。"
+  - fact_id: RULE-SCORING-001
+    statement: "规则表 2 给出七项任务分值，表 3 给出技术汇报 20/40/20/20 分值。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 5 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "实际得分必须来自裁判记录。"
+  - fact_id: RULE-OFFLINE-001
+    statement: "线下任务环节共 10 分钟，重试时当前得分清零、扣分保留、计时不停。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 6 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "具体赛区形式仍以通知为准。"
+  - fact_id: RULE-ONLINE-001
+    statement: "线上视频须一镜到底、不可剪辑或加速、画面声音清晰稳定且为 1080P。"
+    source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "第 7 页"
+    confidence: official
+    status: VERIFIED
+    last_verified: "2026-07-15"
+    notes: "尚无真实提交视频。"
+  - fact_id: THIRD-PARTY-001
+    statement: "IntelligentCar_Baidu 本地审计版本为 be05851d04154d374e46687e10809e13e997f712。"
+    source: "third_party/IntelligentCar_Baidu/.git"
+    source_page_or_location: "git rev-parse HEAD；docs/sources/THIRD_PARTY.lock.yaml"
+    confidence: third_party
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-15"
+    notes: "不是当前赛题官方工程。"
+  - fact_id: THIRD-PARTY-LICENSE-001
+    statement: "参考仓库根目录未发现 LICENSE、LICENCE、COPYING 或 NOTICE 文件。"
+    source: "third_party/IntelligentCar_Baidu"
+    source_page_or_location: "根目录静态扫描"
+    confidence: unknown
+    status: BLOCKED
+    last_verified: "2026-07-15"
+    notes: "LICENSE STATUS: UNVERIFIED；不得复制源码到 src。"
