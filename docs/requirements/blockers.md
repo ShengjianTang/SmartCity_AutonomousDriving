@@ -1,90 +1,103 @@
 # 缺失信息与阻塞项
 
-审计范围：已下载官方赛题页面与 8 页规则，已扫描 `official/organizer_drop/`（当前无投放资料）。下列项目未在现有官方公开资料中得到确认，均保持 `BLOCKED`。获得资料后先运行新增资料审计，再更新事实登记表和需求矩阵。
+更新时间：2026-07-16。58 项原始阻塞全部保留并获得稳定 ID；资料到位不等于功能完成，只有证据、实现和相应验证都闭合后才能标为 `RESOLVED`。
 
-## 1. 官方赛期资料
+本表专用状态：`RESOLVED`、`PARTIALLY_RESOLVED`、`STILL_BLOCKED`、`REQUIRES_USER_FILE`、`REQUIRES_TARGET_HARDWARE`、`REQUIRES_REAL_MEASUREMENT`、`LICENSE_UNVERIFIED`、`LEGACY_REFERENCE_ONLY`。
 
-| 缺失项 | 为什么需要 | 阻塞功能 | 应从哪里获得 | 获得后放置 | 状态 |
-| --- | --- | --- | --- | --- | --- |
-| 最终地图 | 确认真实路线与拓扑 | 路径规划、状态触发、回放验证 | 组委会赛期文件/赛区通知 | `official/organizer_drop/maps/` | BLOCKED |
-| 详细赛道图纸 | 获取可量化几何与元素位置 | 场地建模、停车/岔路规划 | 组委会详细图纸 | `official/organizer_drop/maps/` | BLOCKED |
-| 元素最终实物样式 | 公开规则图片仅为示意 | 类别定义、采集、识别验证 | 组委会实物资料/真实赛具 | `official/organizer_drop/notices/` 或 `data/raw/` | BLOCKED |
-| 元素摆放规则 | 任务触发依赖实际摆放 | 状态机触发、局部规划 | 组委会布局说明 | `official/organizer_drop/maps/` | BLOCKED |
-| 赛区具体比赛形式 | 规则说明赛后续通知 | 测试流程、提交形式 | 赛区/组委会通知 | `official/organizer_drop/notices/` | BLOCKED |
-| 官方赛具包情况 | 确认实物平台和供应边界 | 硬件选型、合规检查 | 组委会/赛区 | `official/organizer_drop/hardware/` | BLOCKED |
-| 官方基础工程 | 确认支持接口与工程边界 | 驱动、通信、部署 | 组委会 | `official/organizer_drop/examples/` | BLOCKED |
-| 官方训练数据 | 建立合法、匹配赛具的数据基线 | 模型训练和验证 | 组委会 | `official/organizer_drop/datasets/` | BLOCKED |
-| 官方模型 | 确认类别、输入和权重来源 | 目标板推理 | 组委会 | `official/organizer_drop/models/` | BLOCKED |
-| 官方计时接口 | 判断是否存在机器接口或仅视频计时 | 计时集成、比赛日志 | 组委会/赛区 | `official/organizer_drop/sdk/` 或 `notices/` | BLOCKED |
+## 1. 官方赛期资料（B-001—B-010）
 
-## 2. 计算单元
+| ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
+| --- | --- | --- | --- | --- |
+| B-001 | 最终地图 | 路径/状态/回放 | 只有规则示意和 2025 场地资料；需 2026 最终图纸 | REQUIRES_USER_FILE |
+| B-002 | 详细赛道图纸 | 场地建模/停车/岔路 | 需带尺寸、版本和发布日期的最终图纸 | REQUIRES_USER_FILE |
+| B-003 | 元素最终实物样式 | 类别/采集/识别 | 2025 标牌只作旧参考；需 2026 实物图或赛具 | REQUIRES_USER_FILE |
+| B-004 | 元素摆放规则 | 任务触发/局部规划 | 需最终布局说明 | REQUIRES_USER_FILE |
+| B-005 | 赛区具体比赛形式 | 测试/提交 | 石墨有通知链接但本地未闭合当前赛区最终通知 | REQUIRES_USER_FILE |
+| B-006 | 官方赛具包情况 | 硬件/合规 | 已有旧赛事专用卡、镜像、控制板资料，但未证明对应当前整车 | PARTIALLY_RESOLVED |
+| B-007 | 官方基础工程 | 驱动/通信/部署 | 已有 2025 T710/FZ3B 工程；年份、目标板、依赖和许可证不足 | LEGACY_REFERENCE_ONLY |
+| B-008 | 官方训练数据 | 训练/验证 | 未发现可确认的数据集和授权 | STILL_BLOCKED |
+| B-009 | 官方模型 | 目标板推理 | 已登记 3 个 2025 旧模型，不能作为当前最终模型 | LEGACY_REFERENCE_ONLY |
+| B-010 | 官方计时接口 | 计时/比赛日志 | 当前规则与资料未给机器接口 | STILL_BLOCKED |
 
-| 缺失项 | 为什么需要 | 阻塞功能 | 应从哪里获得 | 获得后放置 | 状态 |
-| --- | --- | --- | --- | --- | --- |
-| 具体品牌和型号 | 不能由规则规格反推产品 | 全部板端集成 | 官方赛具清单/铭牌 | `official/organizer_drop/hardware/` | BLOCKED |
-| CPU 架构 | 决定编译目标与依赖二进制 | 交叉编译、部署 | 官方硬件手册或设备探测 | `official/organizer_drop/hardware/`；记录到 `docs/environment/` | BLOCKED |
-| 系统镜像 | 确认运行环境和恢复方式 | 部署、设备驱动 | 组委会 | `official/organizer_drop/sdk/` | BLOCKED |
-| 操作系统 | 决定系统 API 和服务管理 | 运行时、设备访问 | 官方镜像说明或真实设备 | `official/organizer_drop/hardware/` | BLOCKED |
-| 编译器 | 确认 ABI 和可用标准 | 目标端构建 | 官方工具链 | `official/organizer_drop/sdk/` | BLOCKED |
-| AI 推理 SDK | 确认模型加载与执行 API | OfficialInferenceBackend | 官方 SDK | `official/organizer_drop/sdk/` | BLOCKED |
-| 支持的模型格式 | 决定训练产物交付格式 | 模型转换、加载 | SDK 文档 | `official/organizer_drop/sdk/` | BLOCKED |
-| 支持的算子 | 避免部署不兼容网络 | 模型设计与转换 | SDK 算子清单/实测 | `official/organizer_drop/sdk/` | BLOCKED |
-| 模型转换工具 | 生成可部署产物并保留记录 | 模型部署 | 官方工具链 | `official/organizer_drop/sdk/` | BLOCKED |
-| 相机接口 | 决定 CameraBackend 实现 | 真实取流 | 硬件/SDK 手册 | `official/organizer_drop/hardware/` 或 `sdk/` | BLOCKED |
-| 串口接口 | 确认物理/逻辑通信能力 | VehicleTransport | 硬件手册 | `official/organizer_drop/hardware/` | BLOCKED |
-| 设备节点 | 运行时打开设备所需 | 相机和串口启动 | 真实设备枚举 | `docs/environment/target_environment.md` | BLOCKED |
-| 部署流程 | 确认可重复安装和启动 | 板端交付 | 官方指南 | `official/organizer_drop/sdk/` | BLOCKED |
+## 2. 计算单元（B-011—B-023）
 
-## 3. 控制单元和底盘
+| ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
+| --- | --- | --- | --- | --- |
+| B-011 | 具体品牌和型号 | 全部板端集成 | T710/FZ3B 只出现在 2025 旧资料；需当前赛具铭牌/清单 | LEGACY_REFERENCE_ONLY |
+| B-012 | CPU 架构 | 交叉编译/部署 | 随包旧 ELF 为 AArch64；不等于当前板确认 | LEGACY_REFERENCE_ONLY |
+| B-013 | 系统镜像 | 部署/驱动 | 已有镜像烧写资料和大体积镜像工件，仍需确认板型/版本匹配 | PARTIALLY_RESOLVED |
+| B-014 | 操作系统 | 系统 API/服务 | 旧资料提供 Linux 线索；需目标机 `uname/os-release` 留档 | PARTIALLY_RESOLVED |
+| B-015 | 目标编译器/ABI | 目标端构建 | Host Clang 21.1.0 仅用于 Windows；旧 AArch64 工件不可替代工具链 | LEGACY_REFERENCE_ONLY |
+| B-016 | AI 推理 SDK | OfficialInferenceBackend | 旧工程提到 PPNC/ONNX Runtime/Paddle Lite；需当前 SDK | LEGACY_REFERENCE_ONLY |
+| B-017 | 支持的模型格式 | 转换/加载 | 旧模型格式已登记，当前 SDK 支持范围未知 | LEGACY_REFERENCE_ONLY |
+| B-018 | 支持的算子 | 网络设计/转换 | 需当前 SDK 清单并在目标板实测 | REQUIRES_TARGET_HARDWARE |
+| B-019 | 模型转换工具 | 模型部署 | 有旧模型编译教程；需当前版本和可重现转换记录 | LEGACY_REFERENCE_ONLY |
+| B-020 | 相机接口 | CameraBackend | 旧工程/教程有接口线索，当前相机型号与格式未确认 | PARTIALLY_RESOLVED |
+| B-021 | 串口接口 | VehicleTransport | 旧工程与控制板教程有 USB/UART 线索，但版本/物理口未闭合 | PARTIALLY_RESOLVED |
+| B-022 | 设备节点 | 相机/串口启动 | 必须在目标机枚举并记录 | REQUIRES_TARGET_HARDWARE |
+| B-023 | 部署流程 | 板端交付 | 已有旧烧写/远程操作教程；需在匹配目标板复现 | PARTIALLY_RESOLVED |
 
-| 缺失项 | 为什么需要 | 阻塞功能 | 应从哪里获得 | 获得后放置 | 状态 |
-| --- | --- | --- | --- | --- | --- |
-| MCU 型号 | 确认工具链与外设 | MCU 工程、通信 | 赛具手册/实物丝印 | `official/organizer_drop/hardware/` | BLOCKED |
-| MCU 工程 | 确认官方控制逻辑和引脚 | 电机、舵机、鸣笛 | 组委会 | `mcu/official/` | BLOCKED |
-| 舵机控制方式 | 确认命令语义和电气接口 | 转向控制 | 手册、接线图、官方工程 | `official/organizer_drop/hardware/` | BLOCKED |
-| 电机驱动方式 | 确认命令语义和安全边界 | 速度控制 | 手册、接线图、官方工程 | `official/organizer_drop/hardware/` | BLOCKED |
-| 编码器是否存在 | 判断是否具备速度/里程反馈 | 闭环速度、里程计 | 实物检查/硬件手册 | `official/organizer_drop/hardware/` | BLOCKED |
-| 速度反馈方式 | 确认测量来源和单位 | SpeedPlanner、闭环控制 | 官方协议/实车测量 | `docs/interfaces/` | BLOCKED |
-| 串口协议 | 定义帧、字段、校验和异常处理 | VehicleTransport | 官方协议/MCU 源码 | `official/organizer_drop/sdk/` 或 `mcu/official/` | BLOCKED |
-| 急停机制 | 建立可验证的安全停机链路 | SafetySupervisor、实车安全 | 赛具手册/组委会 | `official/organizer_drop/hardware/` | BLOCKED |
-| 蜂鸣器控制方式 | 满足规则鸣笛能力 | 声音提示 | MCU 工程/接线图 | `mcu/official/` | BLOCKED |
+## 3. 控制单元和底盘（B-024—B-032）
 
-## 4. 实车标定
+| ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
+| --- | --- | --- | --- | --- |
+| B-024 | MCU 型号 | MCU 工程/通信 | 旧教程写 GD32F103C8T6；需确认当前赛具丝印/清单 | PARTIALLY_RESOLVED |
+| B-025 | MCU 工程 | 电机/舵机/鸣笛 | PDF 展示代码结构但未投放对应完整源码；需原工程 | REQUIRES_USER_FILE |
+| B-026 | 舵机控制方式 | 转向 | 旧 PDF/API 与协议表仅作线索；需当前接线、固件和标定 | PARTIALLY_RESOLVED |
+| B-027 | 电机驱动方式 | 速度 | 旧 PDF 描述闭环模块；需当前驱动硬件/固件 | PARTIALLY_RESOLVED |
+| B-028 | 编码器是否存在 | 速度/里程反馈 | 旧资料提到编码器，需当前实物确认 | REQUIRES_TARGET_HARDWARE |
+| B-029 | 速度反馈方式 | SpeedPlanner/闭环 | 旧协议有速度字段，单位/方向/实车对应未验证 | PARTIALLY_RESOLVED |
+| B-030 | 串口协议 | VehicleTransport | PDF 与 `uart.hpp` 在帧长、地址、发送长度冲突 | PARTIALLY_RESOLVED |
+| B-031 | 急停机制 | 实车安全 | 仅有 Host 安全拒绝接口；需物理急停/看门狗/断链实测 | REQUIRES_TARGET_HARDWARE |
+| B-032 | 蜂鸣器控制方式 | 鸣笛 | 旧 PDF/协议有语义，需当前 MCU 工程和实物验证 | PARTIALLY_RESOLVED |
 
-| 缺失项 | 为什么需要 | 阻塞功能 | 应从哪里获得 | 获得后放置 | 状态 |
-| --- | --- | --- | --- | --- | --- |
-| 相机内参 | 像素到射线/地面的映射基础 | 去畸变、定位、规划 | 实际相机标定 | `data/calibration/camera_intrinsics.*` | BLOCKED |
-| 畸变参数 | 修正镜头几何误差 | 车道与目标定位 | 实际相机标定 | `data/calibration/camera_intrinsics.*` | BLOCKED |
-| 相机安装高度 | 建立相机到地面关系 | 逆透视、距离估计 | 实车测量 | `data/calibration/camera_extrinsics.*` | BLOCKED |
-| 相机俯仰角 | 建立相机姿态 | 逆透视、距离估计 | 实车标定 | `data/calibration/camera_extrinsics.*` | BLOCKED |
-| 相机相对车体坐标 | 统一感知和控制坐标系 | 路径跟踪 | 实车测量 | `data/calibration/camera_extrinsics.*` | BLOCKED |
-| 车辆轴距 | 运动学模型必需 | 转向/路径跟踪 | 实车测量 | `data/calibration/vehicle_geometry.*` | BLOCKED |
-| 车辆轮距 | 碰撞包络和几何验证 | 规划、安全边界 | 实车测量 | `data/calibration/vehicle_geometry.*` | BLOCKED |
-| 轮胎实际直径 | 速度/里程换算 | 速度反馈 | 实车测量 | `data/calibration/vehicle_geometry.*` | BLOCKED |
-| 舵机中值 | 定义直行基准 | SteeringController | 架空轮和低速标定 | `data/calibration/steering.*` | BLOCKED |
-| 舵机左右限位 | 防止机械冲击 | 转向安全 | 实车标定 | `data/calibration/steering.*` | BLOCKED |
-| 舵机控制值与前轮转角映射 | 把命令转为车辆运动 | 路径跟踪 | 实车标定 | `data/calibration/steering.*` | BLOCKED |
-| 电机控制值与实际速度映射 | 把速度目标转为驱动命令 | 速度控制 | 安全场地实测 | `data/calibration/motor_speed.*` | BLOCKED |
-| 编码器换算关系 | 将计数转为速度/距离 | 速度反馈、里程 | 确认编码器后标定 | `data/calibration/encoder.*` | BLOCKED |
-| 制动距离 | 安全停车和任务停车规划 | SafetySupervisor、停车 | 分速度实车测量 | `data/calibration/braking.*` | BLOCKED |
-| 转弯半径 | 路径可行性和障碍绕行 | LocalPlanner | 实车测量 | `data/calibration/turning.*` | BLOCKED |
-| 停车动作标定数据 | 形成可重复入位/驶出轨迹 | 停车任务 | 真实车位实测 | `data/calibration/parking.*` | BLOCKED |
+## 4. 实车标定（B-033—B-048）
 
-## 5. 感知数据
+| ID | 阻塞项 | 阻塞功能 | 解锁记录 | 状态 |
+| --- | --- | --- | --- | --- |
+| B-033 | 相机内参 | 去畸变/定位 | 实际相机标定文件、图像与误差报告 | REQUIRES_REAL_MEASUREMENT |
+| B-034 | 畸变参数 | 车道/目标定位 | 同 B-033 | REQUIRES_REAL_MEASUREMENT |
+| B-035 | 相机安装高度 | 逆透视/距离 | 带测量方法和设备 ID 的实测 | REQUIRES_REAL_MEASUREMENT |
+| B-036 | 相机俯仰角 | 逆透视/距离 | 外参标定与原始记录 | REQUIRES_REAL_MEASUREMENT |
+| B-037 | 相机相对车体坐标 | 感知/控制坐标 | 外参和车体坐标定义 | REQUIRES_REAL_MEASUREMENT |
+| B-038 | 车辆轴距 | 运动学/跟踪 | 实车几何测量 | REQUIRES_REAL_MEASUREMENT |
+| B-039 | 车辆轮距 | 包络/规划 | 实车几何测量 | REQUIRES_REAL_MEASUREMENT |
+| B-040 | 轮胎实际直径 | 速度/里程 | 负载条件下实测 | REQUIRES_REAL_MEASUREMENT |
+| B-041 | 舵机中值 | 直行基准 | 架空轮/低速安全标定 | REQUIRES_REAL_MEASUREMENT |
+| B-042 | 舵机左右限位 | 转向安全 | 机械限位与电流/温升记录 | REQUIRES_REAL_MEASUREMENT |
+| B-043 | 舵机值到前轮角映射 | 路径跟踪 | 多点测量与拟合记录 | REQUIRES_REAL_MEASUREMENT |
+| B-044 | 电机值到速度映射 | 速度控制 | 封闭场地分档实测 | REQUIRES_REAL_MEASUREMENT |
+| B-045 | 编码器换算关系 | 速度/里程 | 确认编码器后留档测量 | REQUIRES_REAL_MEASUREMENT |
+| B-046 | 制动距离 | 安全停车 | 分速度/电量/地面实测 | REQUIRES_REAL_MEASUREMENT |
+| B-047 | 转弯半径 | 可行性/绕障 | 分舵角低速实测 | REQUIRES_REAL_MEASUREMENT |
+| B-048 | 停车动作标定 | 停车任务 | 真实车位多次重复记录 | REQUIRES_REAL_MEASUREMENT |
 
-| 缺失项 | 为什么需要 | 阻塞功能 | 应从哪里获得 | 获得后放置 | 状态 |
-| --- | --- | --- | --- | --- | --- |
-| 最终类别列表 | 定义模型输出语义 | 目标/信号识别 | 组委会数据说明/最终实物 | `official/organizer_drop/datasets/` | BLOCKED |
-| 类别定义 | 消除相似标志和状态歧义 | 标注、后处理、状态机 | 官方标签说明 | `official/organizer_drop/datasets/` | BLOCKED |
-| 标注格式 | 建立可复现数据管线 | 训练/评估 | 官方数据说明或团队规范审批 | `data/annotations/README.md` | BLOCKED |
-| 训练集 | 学习真实任务元素 | 模型训练 | 组委会或合规实车采集 | `official/organizer_drop/datasets/` 或 `data/raw/` | BLOCKED |
-| 验证集 | 得到独立评估证据 | 模型选择、精度报告 | 官方划分或留档采集 | `data/processed/validation/` | BLOCKED |
-| 真实车载摄像头视频 | 覆盖真实视角、曝光和运动 | 回放、感知验证 | 实际赛具采集 | `data/replay/` | BLOCKED |
-| 光照范围 | 定义数据覆盖与失效边界 | 鲁棒性验证 | 真实场地测量/组委会说明 | `docs/verification/lighting.md` | BLOCKED |
-| 模型权重 | 执行真实推理 | ObjectDetectorBackend | 官方模型或可追溯训练 | `models/official/` 或 `models/converted/` | BLOCKED |
-| 模型精度 | 判断是否满足任务需求 | 模型验收 | 固定验证集实测 | `docs/verification/model_metrics.md` | BLOCKED |
-| 板端推理速度 | 判断实时预算 | 运行时线程与降级策略 | 目标板基准测试 | `docs/verification/target_benchmark.md` | BLOCKED |
+## 5. 感知数据与模型（B-049—B-058）
 
-## 当前最高影响链
+| ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
+| --- | --- | --- | --- | --- |
+| B-049 | 最终类别列表 | 输出语义 | 2025 旧模型有 15/16 项标签；需 2026 最终定义 | REQUIRES_USER_FILE |
+| B-050 | 类别定义 | 标注/后处理 | 需边界情况和状态定义 | REQUIRES_USER_FILE |
+| B-051 | 标注格式 | 数据管线 | 无当前官方格式或获批团队规范 | STILL_BLOCKED |
+| B-052 | 训练集 | 模型训练 | 无合法、匹配当前赛具的数据 | STILL_BLOCKED |
+| B-053 | 验证集 | 模型选择/精度 | 无独立留档验证集 | STILL_BLOCKED |
+| B-054 | 真实车载摄像头视频 | 回放/验证 | 旧示例视频非当前真实车载采集 | REQUIRES_TARGET_HARDWARE |
+| B-055 | 光照范围 | 鲁棒性 | 需真实场地分条件采集/测量 | REQUIRES_REAL_MEASUREMENT |
+| B-056 | 模型权重许可 | 真实推理 | 旧模型存在但没有明确许可证/训练来源 | LICENSE_UNVERIFIED |
+| B-057 | 模型精度 | 模型验收 | 需固定验证集、版本化脚本和实测报告 | REQUIRES_REAL_MEASUREMENT |
+| B-058 | 板端推理速度 | 实时预算 | 需目标板模型基准 | REQUIRES_TARGET_HARDWARE |
 
-计算单元/SDK、MCU/串口协议、真实赛具标定、最终地图与真实感知数据同时缺失，使真实摄像头、板端推理、实车控制和全部任务闭环均保持 `BLOCKED`。这些阻塞项不会因 Host Core 纯逻辑代码可编译而自动解除。
+## 汇总与最高影响链
+
+| 状态 | 数量 |
+| --- | ---: |
+| RESOLVED | 0 |
+| PARTIALLY_RESOLVED | 12 |
+| STILL_BLOCKED | 5 |
+| REQUIRES_USER_FILE | 8 |
+| REQUIRES_TARGET_HARDWARE | 6 |
+| REQUIRES_REAL_MEASUREMENT | 18 |
+| LICENSE_UNVERIFIED | 1 |
+| LEGACY_REFERENCE_ONLY | 8 |
+
+总计 58。当前最大链路仍是“当前目标板/SDK与设备节点 → 版本一致的 MCU/协议/急停 → 实车标定 → 当前类别与真实数据 → 模型/规划/控制 → 封闭场地验证”。Host 离线构建和回放成功不会自动解除其中任何实车项。

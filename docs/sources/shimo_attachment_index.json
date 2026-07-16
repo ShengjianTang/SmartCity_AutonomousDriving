@@ -1,0 +1,27 @@
+{
+  "index_url": "https://shimo.im/docs/1hXhe9FzipozjCuf",
+  "page_title": "2026-AIC-智慧城市无人驾驶算法应用赛",
+  "page_updated_at": "2026-06-26T06:20:32.000Z",
+  "retrieved_at": "2026-07-16T15:06:24+08:00",
+  "retrieval": "public read-only file metadata API with contentUrl=true, then expiring content URL",
+  "content_sha256": "2b6523d37efacf1472e7c8bd333ca03e0eb0df194c7ab93563ac6fb5612b9491",
+  "attachments": [
+    {"name": "关于举办第七届全球校园人工智能算法精英大赛的通知-3.pdf", "size": 363052, "url": "https://uploader.shimo.im/f/5GxLYNJ8b0HuUzi5.pdf"},
+    {"name": "关于举办第七届全球校园人工智能算法精英大赛的通知-250616.pdf", "size": 712014, "url": "https://uploader.shimo.im/f/I2yFGeTfmdPtNICN.pdf"},
+    {"name": "2025智慧城市无人驾驶算法应用赛（区域赛线上）比赛说明(1030).pdf", "size": 422369, "url": "https://uploader.shimo.im/f/3sINJSJE9w4QYSJF.pdf"},
+    {"name": "关于举办第七届全球校园人工智能算法精英大赛北京赛区决赛的通知.pdf", "size": 222022, "url": "https://uploader.shimo.im/f/A74OgseZFaSnxrn0.pdf"},
+    {"name": "（17）智慧城市无人驾驶算法应用赛.pdf", "size": 947910, "url": "https://uploader.shimo.im/f/yZzip0QElSr32DeO.pdf"},
+    {"name": "2025AIC大赛参赛学生 - 报名参赛流程.pdf", "size": 1659081, "url": "https://uploader.shimo.im/f/OoU3yTfdCG6zzLc9.pdf"},
+    {"name": "教师系统操作指南.pdf", "size": 1191330, "url": "https://uploader.shimo.im/f/D03GMZVkvCEb9EjJ.pdf"},
+    {"name": "学生报名参赛指南.pdf", "size": 1854423, "url": "https://uploader.shimo.im/f/6YzUhHYlFS9rtlO8.pdf"},
+    {"name": "[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf", "size": 5675068, "url": "https://uploader.shimo.im/f/vEyN8pjRzbeLyp4S.pdf"},
+    {"name": "AIC2025-智慧交通无人驾驶学习手册.pdf", "size": 461935, "url": "https://uploader.shimo.im/f/F6TI4QkL09wDEmk5.pdf"},
+    {"name": "icar_autopilot_2025th.zip", "size": 92474780, "url": "https://uploader.shimo.im/f/M0zclQZbev52mYoG.zip"},
+    {"name": "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf", "size": 3897010, "url": "https://uploader.shimo.im/f/U3Ae0DcOJCN2IC01.pdf"}
+  ],
+  "notes": [
+    "The 2026 section contains current notice and track hyperlinks but no embedded vehicle-learning attachment bundle.",
+    "The learning-manual section explicitly points to AIC2025 material and says it covers eight learning areas.",
+    "Direct attachment fetch returned a Shimo anti-hotlink PNG instead of the PDF; no bypass was attempted."
+  ]
+}

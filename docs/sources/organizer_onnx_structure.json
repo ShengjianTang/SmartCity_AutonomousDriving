@@ -1,0 +1,170 @@
+[
+  {
+    "original_path": "official/organizer_drop/examples/开源工程/extracted/icar_autopilot_2025th/icar_autopilot_2025th/res/models/yolov3_mobilenet_v1/post.onnx",
+    "sha256": "f346d1679599f7dbc08aad462ccbbf35a347f4567db63fbcd1020094e80bb980",
+    "checker_status": "PASS",
+    "ir_version": 8,
+    "producer_name": null,
+    "producer_version": null,
+    "opsets": [
+      {
+        "domain": "ai.onnx",
+        "version": 11
+      }
+    ],
+    "inputs": [
+      {
+        "name": "conv2d_84.tmp_1",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          60,
+          10,
+          10
+        ]
+      },
+      {
+        "name": "conv2d_85.tmp_1",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          60,
+          20,
+          20
+        ]
+      },
+      {
+        "name": "conv2d_86.tmp_1",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          60,
+          40,
+          40
+        ]
+      },
+      {
+        "name": "im_shape",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "scale_factor",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          2
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "concat_1.tmp_0",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          6300,
+          4
+        ]
+      },
+      {
+        "name": "concat_0.tmp_0",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          15,
+          6300
+        ]
+      }
+    ],
+    "node_count": 268,
+    "initializer_count": 0
+  },
+  {
+    "original_path": "official/organizer_drop/examples/开源工程/extracted/icar_autopilot_2025th/icar_autopilot_2025th/res/models/yolov3_mobilenet_v1_past/post.onnx",
+    "sha256": "f346d1679599f7dbc08aad462ccbbf35a347f4567db63fbcd1020094e80bb980",
+    "checker_status": "PASS",
+    "ir_version": 8,
+    "producer_name": null,
+    "producer_version": null,
+    "opsets": [
+      {
+        "domain": "ai.onnx",
+        "version": 11
+      }
+    ],
+    "inputs": [
+      {
+        "name": "conv2d_84.tmp_1",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          60,
+          10,
+          10
+        ]
+      },
+      {
+        "name": "conv2d_85.tmp_1",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          60,
+          20,
+          20
+        ]
+      },
+      {
+        "name": "conv2d_86.tmp_1",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          60,
+          40,
+          40
+        ]
+      },
+      {
+        "name": "im_shape",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          2
+        ]
+      },
+      {
+        "name": "scale_factor",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          2
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "concat_1.tmp_0",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          6300,
+          4
+        ]
+      },
+      {
+        "name": "concat_0.tmp_0",
+        "data_type": "FLOAT",
+        "shape": [
+          1,
+          15,
+          6300
+        ]
+      }
+    ],
+    "node_count": 268,
+    "initializer_count": 0
+  }
+]

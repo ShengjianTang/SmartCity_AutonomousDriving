@@ -1,0 +1,8 @@
+schema_version: 1
+mode: offline_replay
+dry_run_required: true
+detector_required: true
+motion_configuration_complete: false
+maximum_frame_age_ms: null
+maximum_frame_age_source_required: "Target compute timing budget plus measured camera/decode/decision latency"
+model_registry_path: "../../models/official/metadata/model_registry.yaml"

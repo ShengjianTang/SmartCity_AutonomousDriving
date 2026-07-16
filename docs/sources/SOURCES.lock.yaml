@@ -27,3 +27,33 @@ sources:
     extractable_text_pages: 8
     validation_status: VERIFIED
     notes: "文件头为 %PDF-；pypdf 与 Poppler 均解析为 8 页；逐页渲染目视检查通过。根目录原有 PDF 与此文件 SHA-256 相同。"
+  - name: shimo_2026_aic_material_index
+    type: organizer_public_index
+    url: "https://shimo.im/docs/1hXhe9FzipozjCuf"
+    downloaded_at: "2026-07-16"
+    local_path: "docs/sources/shimo_attachment_index.json"
+    content_snapshot_sha256: "2b6523d37efacf1472e7c8bd333ca03e0eb0df194c7ab93563ac6fb5612b9491"
+    attachment_count: 12
+    validation_status: VERIFIED
+    notes: "只记录公开页元数据和结构化附件索引；不保存临时签名 URL，不绕过附件防盗链。"
+  - name: organizer_icar_autopilot_2025th_t710
+    type: organizer_legacy_archive
+    local_path: "official/organizer_drop/examples/开源工程/icar_autopilot_2025th.zip"
+    sha256: "54f0c38151b5844b0108754d3917b2bfcab983e8a8a79f03d0bea8d5eacf69c7"
+    size_bytes: 92474780
+    validation_status: REFERENCE_ONLY
+    notes: "压缩包完整性/路径安全通过；许可证未确认；2025 旧工程。"
+  - name: organizer_icar_autopilot_2025th_fz3b
+    type: organizer_legacy_archive
+    local_path: "official/organizer_drop/examples/开源工程/icar_autopilot_2025th_FZ3B.zip"
+    sha256: "c03a6a6b74ba0ba18a8f6ff673ea5548201ea55373d1e2a520427111ea7517a4"
+    size_bytes: 64417705
+    validation_status: REFERENCE_ONLY
+    notes: "压缩包完整性/路径安全通过；许可证未确认；2025 旧工程。"
+  - name: organizer_control_board_tutorial
+    type: organizer_legacy_pdf
+    local_path: "official/organizer_drop/hardware/control_board/智能汽车竞赛-开源资料及智控板使用教程/智能汽车竞赛-开源资料及智控板使用教程.pdf"
+    sha256: "c6a48327b3f327e5f38185631f5214f7fd9d5e4e724f7ffc4016bbff27c6806e"
+    size_bytes: 4353151
+    validation_status: REFERENCE_ONLY
+    notes: "协议表与旧 uart.hpp 存在冲突，不能直接生成正式串口实现。"

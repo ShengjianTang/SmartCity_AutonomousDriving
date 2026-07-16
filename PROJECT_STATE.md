@@ -1,88 +1,61 @@
 # PROJECT_STATE
 
-- 更新时间：2026-07-15T20:35:05+08:00
-- Git 分支：`master`
-- Git commit：未产生首个 commit（unborn repository）
-- 当前官方需求数量：31
-- 需求矩阵状态：`VERIFIED` 4、`BLOCKED` 23、`NOT_STARTED` 4
+- 更新时间：2026-07-16T15:48:31+08:00
+- Git 分支：`audit/organizer-materials-integration`
+- 本轮基线 commit：`9d9b624f1fa10e57bdd6e592a685656a1b93b8d6`
+- 需求矩阵：35 项（`VERIFIED` 4、`IMPLEMENTED_UNVERIFIED` 4、`BLOCKED` 23、`NOT_STARTED` 4）
+- 阻塞清单：58 项，0 项真正解除
 
-## 已完成工作
+## 当前工程在做什么
 
-- 完成主机、工具链、磁盘、内存和网络可达性审计。
-- 初始化 Git，建立目录、忽略规则和本地 `.venv`。
-- 下载、校验并锁定官方网页与规则 PDF；逐页渲染检查。
-- 建立幂等下载、规则提取和新增官方资料审计脚本，并实际运行。
-- 克隆并锁定第三方参考仓库；完成版本、构建、硬件、复用和许可证审计。
-- 建立规则摘要、31 条需求追踪矩阵、事实登记和 58 项阻塞清单。
-- 建立长期代理约束、架构、状态机、安全策略和 6 份配置 schema。
-- 写入 C++17 Host Core 源码和单元测试源码；真实构建因工具链缺失而阻塞。
-
-## 已下载资料
-
-| 资料 | 本地路径 | SHA-256/状态 |
-| --- | --- | --- |
-| 赛题网页 | `official/public/webpages/track_4548.html` | `8ebbfc4e95cf0cf22e0752499239d8302e11d1a73085b8e9cbb7d18c9bdc8f7f` / VERIFIED |
-| 官方规则 PDF | `official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf` | `41cd80412a740049f15bf02bc9f9ea28b9b89f96af1d8a4335fb750f98c03988` / VERIFIED |
-
-根目录原有 PDF 与官网下载 PDF 哈希一致，已保留且不作为第二份来源记录。
-
-## 第三方版本
-
-- 路径：`third_party/IntelligentCar_Baidu/`
-- commit：`be05851d04154d374e46687e10809e13e997f712`
-- 分支：`master`
-- 工作树：克隆后干净
-- 状态：`REFERENCE_ONLY`
-- 许可证：`UNVERIFIED`
+本仓库把“官方/组委会资料证据”转成可追踪需求和安全边界，在 Windows Host 上提供一个不会驱动车辆的离线算法骨架：读取视频帧、校验配置/模型登记/帧时效、形成语义观测、运行任务状态与安全监督、只记录安全停止和遥测。真实相机、板端推理、规划控制和串口执行必须等当前硬件、协议、标定与数据闭合后再接入。
 
 ## VERIFIED
 
-- 两个公开来源的 HTTP、大小、Content-Type、SHA-256 和本地文件有效性。
-- PDF `%PDF-` 文件头、pypdf/Poppler 均为 8 页、8 页文本可提取、全页渲染可读。
-- 下载脚本幂等校验退出码 0；规则提取脚本退出码 0；新增资料审计脚本退出码 0。
-- 来源锁、事实表和 6 份 schema 共 9 个 YAML 文件已实际解析通过。
-- 第三方 commit/分支/remote/干净状态及许可证文件缺失的静态检查结果。
+- 官网赛题页和 8 页规则 PDF 的 HTTP、SHA-256、解析与全页渲染。
+- 组委会原始投放 33 文件、22,960,347,578 字节；12 个压缩包完整性/路径安全检查及隔离解压，失败 0。
+- 清理后 manifest 为 1,146 文件、114,392,868,846 字节；清理只移除核准元数据和可再生临时文件。
+- 石墨公开页元数据/内容快照与 12 个附件索引；附件防盗链阻塞按事实记录，未绕过。
+- 两个 ONNX 后处理图的哈希与结构检查；旧工程源码差异、AArch64 ELF、依赖和许可证静态事实。
+- Host 本机真实配置/构建/链接，CTest 1/1 通过。
 
 ## IMPLEMENTED_UNVERIFIED
 
-- 无。Host Core 源码存在，但按照任务约束，未真实编译前不使用此状态。
+- C++17 Host Core：状态/错误、配置文件检查、任务状态机、安全监督、结构化日志、`RecordingTransport`。
+- `ReplayCameraBackend`：通过 FFmpeg 从视频读取 RGB8 帧，维护递增序号和严格单调时间戳，显式 EOF/错误。
+- Host 离线应用：强制 `--dry-run`，读取模型登记，禁用检测器，工作线程可停止并 `join`。
+- 组委会旧示例 `fine.mp4` dry-run：189 帧、189 条安全停止、正常 EOF、0 条 `drives_vehicle=true`。
+- 自动化测试覆盖缺配置/缺视频、EOF、时间戳、过期输入、禁用检测器、手动停止、非法迁移和非驱车传输。
+
+这些状态都未经过当前目标板、当前真实车载视频或真实赛道验证，不能升级为车辆功能 `VERIFIED`。
 
 ## BLOCKED
 
-- Host Core 构建与 CTest：主机找不到 CMake，且 PATH 未发现 C++ 编译器。
-- 真实相机、板端 AI、串口、舵机、电机、速度闭环、巡线、避障、道闸、行人、停车、两圈运行、性能和最终合规性。
-- 目标板/SDK、MCU/协议、最终地图与物料、全套实车标定、感知数据/模型和真实回放视频。
+- 真实相机后端、当前目标板 SDK/推理后端、最终类别/合法数据/可用模型。
+- 版本一致的 MCU 工程、无冲突串口协议、物理急停/看门狗与 `OfficialSerialTransport`。
+- 车辆几何、相机内外参、舵机/电机/编码器/制动/停车全部实测标定。
+- 车道/边界感知、目标识别、局部规划、速度/转向控制及所有比赛任务闭环。
+- 2026 最终地图、实物样式、赛区通知、目标板基准、封闭场地两圈与提交材料。
 
-## REJECTED
+58 项细分：`PARTIALLY_RESOLVED` 12、`STILL_BLOCKED` 5、`REQUIRES_USER_FILE` 8、`REQUIRES_TARGET_HARDWARE` 6、`REQUIRES_REAL_MEASUREMENT` 18、`LICENSE_UNVERIFIED` 1、`LEGACY_REFERENCE_ONLY` 8。
 
-- `https://github.com/Kesci/nanjing_AI_competition_2018.git`：2018 年其他比赛，未克隆、未依赖。
+## REFERENCE_ONLY / REJECTED
 
-## REFERENCE_ONLY
+- 组委会 2025 T710/FZ3B 工程、模型、场地图和示例视频：`REFERENCE_ONLY`；未复制源码/协议实现。
+- `third_party/IntelligentCar_Baidu` commit `be05851d04154d374e46687e10809e13e997f712`：`REFERENCE_ONLY`，许可证未确认。
+- Kesci 2018 其他比赛仓库：`REJECTED`，未依赖。
 
-- `IntelligentCar_Baidu`：硬件/任务/许可证均不满足直接复用条件。
+## 最近验证
 
-## 最近构建和测试
+| 操作 | 结果 |
+| --- | --- |
+| Host CMake configure/build | exit 0；Clang 21.1.0；`-Werror`；3 个目标链接成功 |
+| Host CTest | exit 0；1/1 通过；0.46 秒 |
+| T710/FZ3B 隔离配置 | 编译器检查通过；均因缺 glib/OpenCV 停止；未修改源码 |
+| 模型登记 | 3 个逻辑模型、21 个工件；ONNX checker PASS×2 |
+| 实际视频 dry-run | exit 0；189 帧；正常 EOF；只写 RecordingTransport |
+| 清理后全量 manifest | exit 0；1,146 文件；114,392,868,846 字节 |
 
-| 命令 | 退出码 | 结果 |
-| --- | ---: | --- |
-| `.venv\Scripts\python.exe tools\download\download_public_sources.py` | 0 | 两个已锁定文件校验通过并保留 |
-| `.venv\Scripts\python.exe tools\audit\extract_rules_by_page.py` | 0 | 提取 8 页内嵌文本 |
-| `.venv\Scripts\python.exe tools\audit\audit_new_official_materials.py` | 0 | 扫描 0 个投放文件 |
-| Python YAML/CSV 校验 | 0 | 31 条需求；9 个 YAML 文件解析通过 |
-| `cmake -S . -B build -DBUILD_TESTING=ON` | 1 | `cmake` 命令不存在；未编译、未运行 CTest |
+## 下一步
 
-## 下一步可自动执行
-
-- 在用户提供 CMake 和 C++17 编译器或确认可安装本地工具链后，配置、构建并运行 CTest，修复真实编译问题。
-- 新资料投放后运行清点、哈希和内容审计，再更新证据系统。
-- 持续运行 Python 语法、YAML、CSV、哈希和高风险词终检。
-
-## 下一步必须由用户/组委会/真实硬件提供
-
-- 组委会硬件/SDK/MCU/地图/数据/模型/通知。
-- 实际赛具、接口枚举、相机与车辆标定、真实车载视频和封闭场地测试机会。
-- 若要求在本机完成 C++ 构建：可调用的 CMake 与 C++17 工具链。
-
-## 当前最高风险
-
-真实安全停止链路、控制协议和车辆标定均未知。任何把第三方参数或 Host 语义直接连接到实车的行为都可能导致车辆失控，必须禁止。
+用户应优先按 `USER_INPUT_REQUIRED.md` 补组装视频/学习手册、当前赛具/目标板证据、匹配 MCU 工程与协议，然后提供最终地图/类别/数据和全部标定记录。资料不足时仍可继续增强纯 Host 测试与审计工具，但不能安全完成实车功能。

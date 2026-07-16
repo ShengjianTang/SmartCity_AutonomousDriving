@@ -1,0 +1,21 @@
+title,child_link,page_accessible,has_attachment,attachment_filename,local_correspondence,sha256,fully_downloaded,only_description_missing_companion,year,target_board,status
+板卡镜像烧录,"AIC2025 学习手册内章节（附件防盗链，子链接不可提取）",yes,unknown,UNKNOWN,"official/organizer_drop/hardware/board_image/赛事专用卡-镜像开源资料/",see organizer_material_manifest.csv,unknown,unknown,"2022-2025",T710/EdgeBoard legacy,PRESENT_INCOMPLETE
+板卡远程连接,"AIC2025 学习手册内章节（附件防盗链，子链接不可提取）",yes,unknown,UNKNOWN,"official/organizer_drop/hardware/remote_access/赛事专用卡-远程操作资料/",see organizer_material_manifest.csv,unknown,unknown,legacy,EdgeBoard legacy,PRESENT_INCOMPLETE
+车模组装,"AIC2025 学习手册内章节（附件防盗链，子链接不可提取）",yes,yes,"车模组装视频教程（页面正文未暴露文件名/URL）",NONE,,no,yes,unknown,unknown,MISSING
+开源代码使用,https://uploader.shimo.im/f/M0zclQZbev52mYoG.zip,yes,yes,icar_autopilot_2025th.zip,"official/organizer_drop/examples/开源工程/icar_autopilot_2025th.zip",54f0c38151b5844b0108754d3917b2bfcab983e8a8a79f03d0bea8d5eacf69c7,yes,no,2025,T710 legacy,PRESENT_AND_VERIFIED
+智控板使用,"AIC2025 学习手册内章节（附件防盗链，子链接不可提取）",yes,unknown,UNKNOWN,"official/organizer_drop/hardware/control_board/智能汽车竞赛-开源资料及智控板使用教程/智能汽车竞赛-开源资料及智控板使用教程.pdf",c6a48327b3f327e5f38185631f5214f7fd9d5e4e724f7ffc4016bbff27c6806e,no,yes,2022-2023,CarDo/GD32F103C8T6 legacy,PRESENT_INCOMPLETE
+模型训练教程,"AIC2025 学习手册内章节（附件防盗链，子链接不可提取）",yes,unknown,UNKNOWN,"official/organizer_drop/models/training/模型训练及部署/",see organizer_material_manifest.csv,no,yes,2025,T710/FZ3B legacy,PRESENT_INCOMPLETE
+赛事专用卡模型编译教程,"AIC2025 学习手册内章节（附件防盗链，子链接不可提取）",yes,unknown,UNKNOWN,"official/organizer_drop/sdk/model_compiler/赛事专用卡-模型编译教程/",see organizer_material_manifest.csv,unknown,unknown,legacy,T710/PPNC legacy,PRESENT_INCOMPLETE
+场地资料,https://uploader.shimo.im/f/vEyN8pjRzbeLyp4S.pdf,yes,yes,"[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf","different AIC2025 field/sticker/DWG/STL files exist locally",,no,no,2025,not applicable,LEGACY_ONLY
+第七届赛事通知-3,https://uploader.shimo.im/f/5GxLYNJ8b0HuUzi5.pdf,yes,yes,"关于举办第七届全球校园人工智能算法精英大赛的通知-3.pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY
+第七届赛事预通知,https://uploader.shimo.im/f/I2yFGeTfmdPtNICN.pdf,yes,yes,"关于举办第七届全球校园人工智能算法精英大赛的通知-250616.pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY
+区域赛线上说明,https://uploader.shimo.im/f/3sINJSJE9w4QYSJF.pdf,yes,yes,"2025智慧城市无人驾驶算法应用赛（区域赛线上）比赛说明(1030).pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY
+北京赛区决赛通知,https://uploader.shimo.im/f/A74OgseZFaSnxrn0.pdf,yes,yes,"关于举办第七届全球校园人工智能算法精英大赛北京赛区决赛的通知.pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY
+2025 比赛规则,https://uploader.shimo.im/f/yZzip0QElSr32DeO.pdf,yes,yes,"（17）智慧城市无人驾驶算法应用赛.pdf","official/public/rules contains a different 2026 rule PDF (size/hash differ)",,no,no,2025,not applicable,LEGACY_ONLY
+2025 学生报名流程,https://uploader.shimo.im/f/OoU3yTfdCG6zzLc9.pdf,yes,yes,"2025AIC大赛参赛学生 - 报名参赛流程.pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY
+教师系统操作指南,https://uploader.shimo.im/f/D03GMZVkvCEb9EjJ.pdf,yes,yes,教师系统操作指南.pdf,NONE,,no,no,2025,not applicable,LEGACY_ONLY
+学生报名参赛指南,https://uploader.shimo.im/f/6YzUhHYlFS9rtlO8.pdf,yes,yes,学生报名参赛指南.pdf,NONE,,no,no,2025,not applicable,LEGACY_ONLY
+2025 场地铺设说明,https://uploader.shimo.im/f/vEyN8pjRzbeLyp4S.pdf,yes,yes,"[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY
+2025 学习手册,https://uploader.shimo.im/f/F6TI4QkL09wDEmk5.pdf,yes,yes,AIC2025-智慧交通无人驾驶学习手册.pdf,NONE,,no,yes,2025,T710/FZ3B legacy,ACCESS_BLOCKED
+2025 开源工程更新,https://uploader.shimo.im/f/M0zclQZbev52mYoG.zip,yes,yes,icar_autopilot_2025th.zip,"official/organizer_drop/examples/开源工程/icar_autopilot_2025th.zip",54f0c38151b5844b0108754d3917b2bfcab983e8a8a79f03d0bea8d5eacf69c7,yes,no,2025,T710 legacy,PRESENT_AND_VERIFIED
+2025 技术分享,https://uploader.shimo.im/f/U3Ae0DcOJCN2IC01.pdf,yes,yes,"2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf",NONE,,no,no,2025,not applicable,LEGACY_ONLY

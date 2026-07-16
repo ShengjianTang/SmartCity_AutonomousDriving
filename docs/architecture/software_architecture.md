@@ -25,3 +25,14 @@
 - 规划输出是目标路径/速度语义；控制器只有在标定完整、后端可用、安全监督授权时才可形成执行命令。
 - 所有硬件输出先经过安全监督；日志失败不得静默掩盖关键错误。
 - 任何未配置依赖都会阻止相关能力启动，而不是使用第三方参数。
+
+## 当前实现状态
+
+| 层 | 当前状态 | 说明 |
+| --- | --- | --- |
+| 证据与配置 | IMPLEMENTED_UNVERIFIED | manifest、facts、source lock、阻塞和 Host 配置读取已落地 |
+| Host 回放适配 | IMPLEMENTED_UNVERIFIED | FFmpeg 视频回放可用；真实相机仍 BLOCKED |
+| 感知 | BLOCKED | 仅 `DisabledDetectorBackend`，不生成假检测 |
+| 任务/安全骨架 | IMPLEMENTED_UNVERIFIED | 状态迁移和安全拒绝路径有测试，规划/控制未实现 |
+| 车辆传输 | BLOCKED | 只有 `RecordingTransport`；协议冲突未闭合 |
+| 可观测性 | IMPLEMENTED_UNVERIFIED | 同步结构化日志和安全命令记录可用 |

@@ -1,0 +1,36 @@
+cmake.exe : CMake Error at .venv/Lib/site-packages/cmake/data/share/cmake-4.4/Modules/CMakeTestCXXCompiler.cmake:71 (me
+ssage):
+所在位置 行:2 字符: 389
++ ... PE=Debug'); & $cmake @args 1> 'logs\setup\host_cmake_configure.stdout ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Error at ...e:71 (message)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+  The C++ compiler
+
+    "F:/SmartCity_Driverless/.venv/Scripts/python-zig.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: 'F:/SmartCity_Driverless/build/CMakeFiles/CMakeScratch/TryCompile-gv412q'
+
+    Run Build Command(s): F:/SmartCity_Driverless/.venv/Scripts/ninja.exe -v cmTC_dc670
+    [1/2] F:\SmartCity_Driverless\.venv\Scripts\python-zig.exe c++    -o CMakeFiles\cmTC_dc670.dir\testCXXCompiler.cxx.
+obj -c F:\SmartCity_Driverless\build\CMakeFiles\CMakeScratch\TryCompile-gv412q\testCXXCompiler.cxx
+    FAILED: [code=1] CMakeFiles/cmTC_dc670.dir/testCXXCompiler.cxx.obj
+    F:\SmartCity_Driverless\.venv\Scripts\python-zig.exe c++    -o CMakeFiles\cmTC_dc670.dir\testCXXCompiler.cxx.obj -c
+ F:\SmartCity_Driverless\build\CMakeFiles\CMakeScratch\TryCompile-gv412q\testCXXCompiler.cxx
+    error: unable to open global cache directory 'C:\Users\<REDACTED_USER>\AppData\Local\zig': AccessDenied
+    If this location is not writable then consider specifying an alternative with the ZIG_GLOBAL_CACHE_DIR environment
+variable or the --global-cache-dir option.
+    ninja: build stopped: subcommand failed.
+
+
+
+
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:3 (project)

@@ -15,6 +15,10 @@ const char* ToString(const ErrorCode code) noexcept {
         case ErrorCode::kInputUnavailable: return "input_unavailable";
         case ErrorCode::kTransportWriteFailed: return "transport_write_failed";
         case ErrorCode::kLogWriteFailed: return "log_write_failed";
+        case ErrorCode::kEndOfStream: return "end_of_stream";
+        case ErrorCode::kInputStale: return "input_stale";
+        case ErrorCode::kInvalidArgument: return "invalid_argument";
+        case ErrorCode::kProcessLaunchFailed: return "process_launch_failed";
     }
     return "unknown_error_code";
 }

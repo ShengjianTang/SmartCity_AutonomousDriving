@@ -10,6 +10,7 @@
 - `config/host/` 只保存主机运行配置模板。
 - `config/vehicle/`、`perception/`、`planning/`、`control/` 等待真实资料后保存实例。
 - 未知字段为 `null`，状态为 `BLOCKED`，并提供 `source_required`。
+- `config/host/offline_replay.yaml` 保持 `maximum_frame_age_ms: null`、`motion_configuration_complete: false`，因此可运行回放但不能获得运动授权。
 
 ## 验证规则
 

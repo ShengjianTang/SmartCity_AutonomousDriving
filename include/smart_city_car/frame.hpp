@@ -14,6 +14,8 @@ namespace smart_city_car {
 struct FrameBuffer final {
     std::vector<std::byte> bytes;
     std::string format;
+    std::size_t width{0};
+    std::size_t height{0};
 };
 
 struct Frame final {

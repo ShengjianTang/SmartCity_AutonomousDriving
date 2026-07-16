@@ -120,3 +120,59 @@ facts:
     status: BLOCKED
     last_verified: "2026-07-15"
     notes: "LICENSE STATUS: UNVERIFIED；不得复制源码到 src。"
+  - fact_id: ORGANIZER-MANIFEST-001
+    statement: "组委会原始投放为 33 个文件、22,960,347,578 字节；12 个压缩包均通过完整性与路径安全检查并完成隔离解压。"
+    source: "docs/sources/organizer_material_manifest.csv"
+    source_page_or_location: "文件级清单与 docs/sources/archive_extraction_report.json"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-16"
+    notes: "解压后首轮清单 1,210 文件、114,392,891,318 字节；清理后重算 1,146 文件、114,392,868,846 字节。"
+  - fact_id: SHIMO-INDEX-001
+    statement: "石墨公开只读页标题为 2026-AIC-智慧城市无人驾驶算法应用赛，共索引 12 个附件；学习手册正文明确为 AIC2025。"
+    source: "https://shimo.im/docs/1hXhe9FzipozjCuf"
+    source_page_or_location: "公开 lizard-api 元数据与内容快照结构化索引"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-16"
+    notes: "内容快照 SHA-256 2b6523d37efacf1472e7c8bd333ca03e0eb0df194c7ab93563ac6fb5612b9491；附件防盗链未绕过。"
+  - fact_id: ORGANIZER-PROJECT-001
+    statement: "2025 T710/FZ3B 旧工程在隔离构建目录中通过 C/C++ 编译器探测，但均因缺少 pkg-config/glib-2.0 与 OpenCV 在配置阶段停止。"
+    source: "logs/setup/organizer_t710_configure.log; logs/setup/organizer_fz3b_configure.log"
+    source_page_or_location: "2026-07-16 实际 CMake 配置"
+    confidence: measured
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "未修改原源码；随包 AArch64 ELF 不是本次构建结果。"
+  - fact_id: ORGANIZER-PROTOCOL-001
+    statement: "控制板 PDF 与旧 uart.hpp 在最大帧长、按键地址和发送长度上存在冲突。"
+    source: "docs/reports/organizer_project_protocol_audit.md"
+    source_page_or_location: "PDF 第 15-16 页与两套旧工程 include/com/uart.hpp"
+    confidence: measured
+    status: BLOCKED
+    last_verified: "2026-07-16"
+    notes: "因此没有实现 OfficialSerialTransport。"
+  - fact_id: ORGANIZER-MODEL-001
+    statement: "已登记 3 个 2025 逻辑模型、21 个工件；两个 ONNX 后处理图结构检查通过且字节相同。"
+    source: "models/official/metadata/model_registry.yaml"
+    source_page_or_location: "docs/sources/organizer_onnx_structure.json"
+    confidence: measured
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "模型许可证未确认；未运行真实推理或报告精度/速度。"
+  - fact_id: HOST-BUILD-001
+    statement: "Host Core、离线应用和测试在 Windows Host 上以 Clang 21.1.0/C++17/-Werror 构建通过，CTest 1/1 通过。"
+    source: "logs/setup/host_app_build_summary.log"
+    source_page_or_location: "build/host_app"
+    confidence: measured
+    status: IMPLEMENTED_UNVERIFIED
+    last_verified: "2026-07-16"
+    notes: "不是目标板或车辆验证。"
+  - fact_id: HOST-REPLAY-001
+    statement: "离线应用读取旧工程 fine.mp4 共 189 帧并正常 EOF，记录 189 条安全停止，未出现 drives_vehicle=true。"
+    source: "docs/verification/offline_replay_verification.md"
+    source_page_or_location: "logs/runtime/offline_replay_fine.log（本地运行产物，不提交）"
+    confidence: measured
+    status: IMPLEMENTED_UNVERIFIED
+    last_verified: "2026-07-16"
+    notes: "视频是 2025 示例，不是真实当前车载视频。"

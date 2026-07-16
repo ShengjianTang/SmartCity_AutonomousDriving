@@ -1,0 +1,7 @@
+2026-07-16 isolated configure audit: organizer icar_autopilot_2025th FZ3B
+source tree: official/organizer_drop/examples/开源工程/extracted/icar_autopilot_2025th_FZ3B/icar_autopilot_2025th
+build tree: build/organizer_project/fz3b_attempt3
+generator: Ninja; C/CXX: project-local Zig cc/c++ (Clang 21.1.0)
+result: exit=1 at configure; C and CXX compiler checks passed; PkgConfig executable absent; required glib-2.0 absent; OpenCV package configuration absent
+build: not started because configure did not complete
+source modification: none

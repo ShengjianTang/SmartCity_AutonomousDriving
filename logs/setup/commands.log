@@ -26,3 +26,15 @@
 2026-07-15T20:35:00+08:00 final source verification: HTML/PDF hashes match lock, PDF magic valid, Poppler pages=8, rendered pages=8; exit=0
 2026-07-15T22:59:31+08:00 pre-integration audit: branch=master; commit=UNBORN; untracked formal project tree retained; organizer files=34; user raw files=33; raw bytes=22960347578; exit=0
 2026-07-15T23:00:00+08:00 verify organizer raw directories are ignored by Git; sample icar_autopilot_2025th.zip matched .gitignore line 63; exit=0
+2026-07-16T14:38:18+08:00 resume audit on branch audit/organizer-materials-integration at 9d9b624f1fa10e57bdd6e592a685656a1b93b8d6; exit=0
+2026-07-16T14:45:00+08:00 query public Shimo read-only metadata/content API; index 12 attachments; content snapshot sha256=2b6523d37efacf1472e7c8bd333ca03e0eb0df194c7ab93563ac6fb5612b9491; exit=0
+2026-07-16T14:52:00+08:00 inspect Shimo learning-manual response; anti-hotlink PNG placeholder, no bypass; status=ACCESS_BLOCKED
+2026-07-16T15:00:00+08:00 register 3 organizer legacy models/21 artifacts and inspect two ONNX graphs with onnx 1.19.1; checker PASS; exit=0
+2026-07-16T15:06:00+08:00 execute approved cleanup dry-run; remove Apple metadata and regenerable temp artifacts only; final bytes=77697613; exit=0
+2026-07-16T15:21:00+08:00 configure/build Host offline application with project-local CMake/Ninja/Zig; Clang 21.1.0; warnings-as-errors; exit=0
+2026-07-16T15:28:00+08:00 run extended Host CTest; 1/1 passed; 0.46 seconds; exit=0
+2026-07-16T15:30:00+08:00 dry-run smart_city_host_app on organizer fine.mp4 sha256=153f1d550ed7c02853ec0e8d92a8b0dc2cadbe85a8984a18274554666a9adeab; frames=189; safety records=189; drives_vehicle=true matches=0; exit=0
+2026-07-16T15:34:00+08:00 isolated T710 and FZ3B CMake configure audits; compiler checks pass, both stop on missing glib/OpenCV; original sources unchanged
+2026-07-16T15:46:00+08:00 regenerate post-cleanup organizer manifest and checksums; files=1146; bytes=114392868846; exit=0
+2026-07-16T15:52:00+08:00 regenerate organizer PDF extraction audit after metadata cleanup; current PDFs=16; parsed=16; failed=0; remove stale 344-byte AppleDouble extraction record; exit=0
+2026-07-16T15:54:00+08:00 final integration validation; YAML=11; requirements=35; blockers=58; manifest=1146; Shimo attachments=12; models=3; CTest=1/1; git diff check=0; exit=0

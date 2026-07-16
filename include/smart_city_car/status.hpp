@@ -17,6 +17,10 @@ enum class ErrorCode {
     kInputUnavailable,
     kTransportWriteFailed,
     kLogWriteFailed,
+    kEndOfStream,
+    kInputStale,
+    kInvalidArgument,
+    kProcessLaunchFailed,
 };
 
 const char* ToString(ErrorCode code) noexcept;

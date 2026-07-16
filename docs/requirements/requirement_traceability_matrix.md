@@ -1,6 +1,6 @@
 # 需求追踪矩阵
 
-状态描述工程当前对需求的满足/验证情况；官方条文本身的来源可信度另见 `docs/sources/fact_registry.yaml`。完整机器可读版本见同目录 CSV。
+状态描述工程当前对需求的满足/验证情况；官方条文本身的来源可信度另见 `docs/sources/fact_registry.yaml`。完整机器可读版本见同目录 CSV。`ENG-*` 是本次总控任务新增的工程要求，不是组委会规则；它们用于避免 Host 可运行状态与实车合规状态混淆。
 
 | Requirement ID | Official statement | Source file | Source page | Category | Planned module | Input | Output | Verification method | Current status | Blocking dependency | Notes |
 | --- | --- | --- | ---: | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -35,3 +35,7 @@
 | SUBMISSION-CONTENT-001 | 视频包含车模、计时、任务、判分口播和最终用时等内容 | 官方规则 PDF | 7 | 提交 | 验证报告 | 真实比赛执行 | 视频证据包 | 提交前检查表 | NOT_STARTED | 实车比赛执行 | 仅一轮线上演示 |
 | SUBMISSION-001 | 每队提交一次；链接有效且无提取码；同目录不压缩并按规则命名 | 官方规则 PDF | 7-8 | 提交 | 发布清单 | 视频与 PPT | 提交包 | 人工检查命名、链接和时间 | NOT_STARTED | 组委会提交窗口、最终材料 | 逾期或命名错误无效 |
 | FIELD-FINAL-001 | 线下最终场地以组委会为准，可能与示意图不同，机器人须适应提供的场地物料 | 官方规则 PDF | 8 | 场地 | 地图/验证 | 赛期场地与物料 | 最终合规记录 | 现场核对 | BLOCKED | 赛期场地与物料 | 示意图仅参考 |
+| ENG-HOST-BUILD-001 | Host Core、离线应用和测试须真实配置、编译、链接 | 本次总控任务 | N/A | 工程 | CMake/Host | 本地主机工具链 | 可执行文件与日志 | `-Werror` 构建记录 | IMPLEMENTED_UNVERIFIED | 非目标板构建 | Clang 21.1.0；15/15 构建步骤通过 |
+| ENG-REPLAY-001 | 从真实视频读取连续帧，维护序号、单调时间戳并正常处理 EOF | 本次总控任务 | N/A | 工程 | ReplayCameraBackend | 视频/FFmpeg | Frame 流 | 单元测试与组委会示例视频 dry-run | IMPLEMENTED_UNVERIFIED | B-054 真实车载视频 | `fine.mp4` 189 帧正常 EOF |
+| ENG-SAFETY-OFFLINE-001 | 配置/检测/时效/传输未闭合时拒绝运动且只记录安全停止 | 本次总控任务 | N/A | 安全 | SafetySupervisor/RecordingTransport | 后端健康/配置 | 非驱车记录 | 单元测试与日志扫描 | IMPLEMENTED_UNVERIFIED | B-030、B-031、全部标定项 | `drives_vehicle=true` 0 次，不代表实车急停 |
+| ENG-MODEL-REGISTRY-001 | 旧模型须登记来源、哈希、结构、用途与许可证边界 | 本次总控任务 | N/A | 工程 | Model registry | 组委会模型工件 | 机器可读登记 | ONNX checker/哈希/解析测试 | IMPLEMENTED_UNVERIFIED | B-049、B-056—B-058 | 3 个逻辑模型均为 REFERENCE_ONLY |

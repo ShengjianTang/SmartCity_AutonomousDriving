@@ -1,0 +1,11 @@
+2026-07-16 host_app configure
+command: cmake -S . -B build/host_app -G Ninja -DBUILD_TESTING=ON -DCMAKE_BUILD_TYPE=Debug with project-local CMake/Ninja/Zig wrappers and build-local Zig caches
+result: exit=0; CXX=Clang 21.1.0; configure/generate completed
+
+2026-07-16 host_app build
+command: cmake --build build/host_app --verbose
+result: exit=0; smart_city_host_core, smart_city_host_app, host_core_tests linked; warnings treated as errors
+
+2026-07-16 host_app tests
+command: ctest --test-dir build/host_app --output-on-failure
+result: exit=0; 1/1 tests passed; total=0.46s

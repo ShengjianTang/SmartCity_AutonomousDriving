@@ -1,0 +1,134 @@
+[
+  {
+    "archive": "examples/开源工程/icar_autopilot_2025th.zip",
+    "sha256": "54f0c38151b5844b0108754d3917b2bfcab983e8a8a79f03d0bea8d5eacf69c7",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "examples/开源工程/extracted/icar_autopilot_2025th",
+    "member_count": 426,
+    "extracted_file_count": 361,
+    "extracted_bytes": 121723907,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "examples/开源工程/icar_autopilot_2025th_FZ3B.zip",
+    "sha256": "c03a6a6b74ba0ba18a8f6ff673ea5548201ea55373d1e2a520427111ea7517a4",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "examples/开源工程/extracted/icar_autopilot_2025th_FZ3B",
+    "member_count": 375,
+    "extracted_file_count": 317,
+    "extracted_bytes": 74811809,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/DRIVER_R4.19.5001.zip",
+    "sha256": "76b8c13127835ba636935961a78f83a63d92cf9b2d9f563d61530be5a10dfc42",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/extracted/DRIVER_R4.19.5001",
+    "member_count": 126,
+    "extracted_file_count": 117,
+    "extracted_bytes": 24641132,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/USB Image Tool.rar",
+    "sha256": "e6c7c401969d0240e75792d26612a51f2f5a538a1a08bf2c5d2f71016a53f8b8",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/extracted/USB Image Tool",
+    "member_count": 7,
+    "extracted_file_count": 7,
+    "extracted_bytes": 437399,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/产线-Upgrade_Download_R27.22.3801.7z",
+    "sha256": "258cc0c6ef45619ab12ab3bd39c97576e8e6c33a2e19292527ff959f9b98bb57",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/extracted/产线-Upgrade_Download_R27.22.3801",
+    "member_count": 388,
+    "extracted_file_count": 341,
+    "extracted_bytes": 32620572,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/格式内存卡.rar",
+    "sha256": "4d6bb5879d611416d6ece24a57237cd3d5e0ec8deec90dbf89265867b69ac268",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/01-镜像工具/extracted/格式内存卡",
+    "member_count": 8,
+    "extracted_file_count": 8,
+    "extracted_bytes": 3809343,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/02-EMMC镜像/t710sys-230222.pac.tgz",
+    "sha256": "f18730e6ba3080aecf0214263634d5ffc22bf3c73101f0d917619f3fa9abb6c9",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/02-EMMC镜像/extracted/t710sys-230222.pac",
+    "member_count": 1,
+    "extracted_file_count": 2,
+    "extracted_bytes": 11251956144,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/03-赛事定制镜像-SD卡-推荐/t710-boot-sd.pac.zip",
+    "sha256": "10eb52596ae98cae03509936f65d023fb50a68c32b0c2c22f9096d6a9b98bcd2",
+    "validation": "VALID",
+    "extraction": "SKIPPED_EXISTING",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/03-赛事定制镜像-SD卡-推荐/extracted/t710-boot-sd.pac",
+    "member_count": 1,
+    "extracted_file_count": 2,
+    "extracted_bytes": 94323233,
+    "detail": "matching completion marker; no files overwritten"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/03-赛事定制镜像-SD卡-推荐/赛事开源-EB新板卡-IP254 V1.1.zip",
+    "sha256": "045acaa161085ae94fa50782f91b36a5c8e0d779ab8b19186458ee218fbd1e93",
+    "validation": "VALID",
+    "extraction": "EXTRACTED",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/03-赛事定制镜像-SD卡-推荐/extracted/赛事开源-EB新板卡-IP254 V1.1",
+    "member_count": 1,
+    "extracted_file_count": 1,
+    "extracted_bytes": 31266439168,
+    "detail": "ZIP central directory and CRC validation passed"
+  },
+  {
+    "archive": "hardware/board_image/赛事专用卡-镜像开源资料/03-赛事定制镜像-SD卡-推荐/赛事开源-EB新板卡-IP254-29.12G.rar",
+    "sha256": "bd69c0ea61e84f32aee4b267b3586b65aff5956dcff36ee849bd000df44761b5",
+    "validation": "VALID",
+    "extraction": "EXTRACTED",
+    "destination": "hardware/board_image/赛事专用卡-镜像开源资料/03-赛事定制镜像-SD卡-推荐/extracted/赛事开源-EB新板卡-IP254-29.12G",
+    "member_count": 1,
+    "extracted_file_count": 1,
+    "extracted_bytes": 31266439168,
+    "detail": "bsdtar listing and member path validation passed"
+  },
+  {
+    "archive": "hardware/remote_access/赛事专用卡-远程操作资料/MobaXterm_Installer_v23.0.zip",
+    "sha256": "668550319b08dbc690290b13d129d337b3d82383b7def31afaecff4e793b5c1d",
+    "validation": "VALID",
+    "extraction": "EXTRACTED",
+    "destination": "hardware/remote_access/赛事专用卡-远程操作资料/extracted/MobaXterm_Installer_v23.0",
+    "member_count": 2,
+    "extracted_file_count": 2,
+    "extracted_bytes": 31674209,
+    "detail": "ZIP central directory and CRC validation passed"
+  },
+  {
+    "archive": "sdk/model_compiler/赛事专用卡-模型编译教程/ppnc2.0_v1.0.2.tar",
+    "sha256": "655db72cf5d8f34f6a28007160396e1c16eb763bb10e2566a98b3fedce57abf3",
+    "validation": "VALID",
+    "extraction": "EXTRACTED",
+    "destination": "sdk/model_compiler/赛事专用卡-模型编译教程/extracted/ppnc2.0_v1.0.2",
+    "member_count": 15,
+    "extracted_file_count": 12,
+    "extracted_bytes": 10656587731,
+    "detail": "TAR headers and member paths validated"
+  }
+]

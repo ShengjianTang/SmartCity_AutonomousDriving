@@ -9,6 +9,8 @@ struct SafetyInputs final {
     bool camera_available{false};
     bool detector_required{false};
     bool detector_available{false};
+    bool freshness_limit_configured{false};
+    bool input_fresh{false};
     bool transport_available{false};
     bool manual_stop_requested{false};
 };
