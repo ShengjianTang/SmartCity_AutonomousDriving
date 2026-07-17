@@ -210,6 +210,38 @@ def main() -> int:
             "organizer_2025_projects": "LEGACY_REFERENCE_ONLY",
             "final_competition_model": "BLOCKED pending 2026 classes, license, target-board and real validation evidence",
         },
+        "legacy_capability_evidence": {
+            "source": "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf",
+            "source_sha256": "1189095a336f5f97877fe7e48a6c01e04ce778f7d52c402a093b585002c78410",
+            "source_page": 28,
+            "classification": "LEGACY_2025_ORGANIZER_REFERENCE",
+            "validation_status": "REFERENCE_ONLY",
+            "scope": "2025 candidate Edgeboard/PPNC capability claim only; not a current runtime whitelist",
+            "ppnc_api_languages": ["C++", "Python"],
+            "supported_model_series": {
+                "PaddleSeg": [
+                    "DDRNet", "PP-LiteSeg", "DeepLabV3", "DeepLabV3P", "GCNet", "SFNet", "LaneSeg",
+                    "OCRNet", "U-Net", "DecoupledSegNet", "PointRend", "EMANet", "ESPNetV1", "DANet",
+                    "SegFormer", "PFPNNet", "FCN", "BiSeNetV2", "ANN", "STDCSeg", "ENCNet", "HarDNet",
+                    "DNLNet", "HRNetW48Contrast",
+                ],
+                "PaddleClas": [
+                    "ShiTuV2", "PP-LCNetV2", "PP-HGNet", "CSWinTransformer", "ReID", "PULC", "PVT_V2",
+                    "ResNet", "GhostNet", "Twins", "ResNeSt", "DPN", "ViT", "MixNet", "DarkNet53",
+                    "SEResNeXt", "SqueezeNet", "Inception", "VGG", "MobileNetV2", "ReXNet", "DenseNet",
+                    "MobileNetV1", "HarDNet", "Xception", "AlexNet", "Res2Net", "ShuffleNetV2", "DLA",
+                    "PP-LCNet", "MobileNetV3", "DeiT", "EfficientNet", "HRNet", "ESNet",
+                ],
+                "PaddleDetection": [
+                    "PP-PicoDet", "DeepSORT", "PP-TinyPose", "PP-YOLOE+", "HRNet", "PP-YOLOE",
+                    "Lite-HRNet", "PP-YOLO", "YOLOv3", "FCOS", "Faster RCNN",
+                ],
+                "PaddleOCR": [
+                    "SAST", "SVTR", "ch-PP-OCRv3", "StarNet", "PSE", "Rosetta", "DB", "ch_PP-OCRv3",
+                    "EAST", "ch_PP-OCRv2", "RARE", "CRNN", "SRN",
+                ],
+            },
+        },
         "models": [
             t710_entry("legacy_2025_t710_yolov3_mobilenet_v1", "yolov3_mobilenet_v1"),
             t710_entry("legacy_2025_t710_yolov3_mobilenet_v1_past", "yolov3_mobilenet_v1_past"),

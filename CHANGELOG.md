@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [Four-document incremental audit] - 2026-07-16
+
+### 证据与版本边界
+
+- 仅对四份用户新增 PDF 计算 SHA-256、解析和逐页渲染，没有重扫 114GB 组委会资料；原始文件未覆盖或移动。
+- 三份 2025 PDF 确认为既有 manifest/来源锁中没有的新本地文件，并与石墨附件索引同名同大小；分别登记为 `LEGACY_2025_ORGANIZER_REFERENCE`、`LEGACY_2025_RESOURCE_INDEX`、`LEGACY_2025_FIELD_REFERENCE`。
+- 根目录 `11智慧城市无人驾驶算法应用赛.pdf` 与已锁定 2026 官方规则整文件、字节、8 页文本哈希和 8 页渲染哈希全部一致，登记为当前规则重复副本。
+- 登记 T710 推荐/FZ3B 不推荐、候选板接口/Ubuntu 18.04/PPNC、PPNC 模型系列、旧车模电子/软件架构、旧场地/道具/裁判计时和当前任务/评分证据。
+- 明确隔离 2025 信号灯/连续弯道与当前岔路任务，以及旧 4.7m×4.2m 与当前约 4.5m×4.0m/赛期地图；未把旧速度、阈值、标签、坐标或控制参数写入正式配置。
+
+### 文档与工具
+
+- 新增定向审计脚本和机器记录 `docs/sources/four_new_documents_incremental_audit.json`，更新来源锁、事实登记、阻塞项、需求矩阵、模型能力证据、石墨覆盖矩阵、用户补料清单和项目状态。
+- 新增 `docs/reports/four_new_documents_incremental_audit.md`，按优先级说明仍缺资料、获取位置和交付目录。
+
 ## [Audit checkpoint] - 2026-07-16
 
 ### 组委会资料与石墨索引

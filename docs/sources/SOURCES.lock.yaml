@@ -57,3 +57,46 @@ sources:
     size_bytes: 4353151
     validation_status: REFERENCE_ONLY
     notes: "协议表与旧 uart.hpp 存在冲突，不能直接生成正式串口实现。"
+  - name: user_copy_current_2026_rules
+    type: current_rule_pdf_duplicate
+    local_path: "11智慧城市无人驾驶算法应用赛.pdf"
+    sha256: "41cd80412a740049f15bf02bc9f9ea28b9b89f96af1d8a4335fb750f98c03988"
+    size_bytes: 776654
+    pdf_pages: 8
+    relationship: BYTE_IDENTICAL_TO_SMART_CITY_DRIVERLESS_OFFICIAL_RULES
+    classification: CURRENT_2026_RULES_BYTE_IDENTICAL_COPY
+    validation_status: VERIFIED
+    notes: "与既有官方下载件整文件、字节、逐页规范化文本和逐页 Poppler 渲染全部一致；原文件保持在根目录且未覆盖。"
+  - name: legacy_2025_organizer_technical_share
+    type: organizer_legacy_pdf
+    url: "https://uploader.shimo.im/f/U3Ae0DcOJCN2IC01.pdf"
+    index_url: "https://shimo.im/docs/1hXhe9FzipozjCuf"
+    local_path: "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf"
+    sha256: "1189095a336f5f97877fe7e48a6c01e04ce778f7d52c402a093b585002c78410"
+    size_bytes: 3897010
+    pdf_pages: 35
+    classification: LEGACY_2025_ORGANIZER_REFERENCE
+    validation_status: REFERENCE_ONLY
+    notes: "文件名和大小精确匹配石墨附件索引；完整 SHA-256 来自用户提供的本地原文件；60 页四文档渲染审计中的 35 页均通过目视检查。"
+  - name: legacy_2025_resource_index_manual
+    type: organizer_legacy_pdf
+    url: "https://uploader.shimo.im/f/F6TI4QkL09wDEmk5.pdf"
+    index_url: "https://shimo.im/docs/1hXhe9FzipozjCuf"
+    local_path: "AIC2025-智慧交通无人驾驶学习手册.pdf"
+    sha256: "4fe04cafa219dd9e926e751a32c4ec875ebdced21fa4707434dc23af19108cdf"
+    size_bytes: 461935
+    pdf_pages: 3
+    classification: LEGACY_2025_RESOURCE_INDEX
+    validation_status: REFERENCE_ONLY
+    notes: "文件名和大小精确匹配石墨附件索引；3 页资源索引，不是当前硬件或 SDK 规格；逐页渲染目视检查通过。"
+  - name: legacy_2025_field_reference
+    type: organizer_legacy_pdf
+    url: "https://uploader.shimo.im/f/vEyN8pjRzbeLyp4S.pdf"
+    index_url: "https://shimo.im/docs/1hXhe9FzipozjCuf"
+    local_path: "[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf"
+    sha256: "ecfde46703eda96fa00c27c3e49723be211d609c88fdbca0befe5ebf5f256eed"
+    size_bytes: 5675068
+    pdf_pages: 14
+    classification: LEGACY_2025_FIELD_REFERENCE
+    validation_status: REFERENCE_ONLY
+    notes: "文件名和大小精确匹配石墨附件索引；14 页均通过渲染目视检查；4.7m×4.2m 等旧场地数据不得进入当前配置。"

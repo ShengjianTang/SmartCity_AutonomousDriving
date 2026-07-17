@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-16T09:08:34Z",
+  "scope": {
+    "mode": "INCREMENTAL_FOUR_DOCUMENTS_ONLY",
+    "full_organizer_tree_rescanned": false,
+    "inputs_hashed": [
+      "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf",
+      "AIC2025-智慧交通无人驾驶学习手册.pdf",
+      "[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf",
+      "11智慧城市无人驾驶算法应用赛.pdf",
+      "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    ],
+    "indexes_read_without_rehashing_indexed_files": [
+      "docs/sources/organizer_material_manifest.csv",
+      "docs/sources/SOURCES.lock.yaml",
+      "docs/sources/shimo_attachment_index.json"
+    ],
+    "original_pdfs_modified": false
+  },
+  "documents": [
+    {
+      "path": "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf",
+      "size_bytes": 3897010,
+      "sha256": "1189095a336f5f97877fe7e48a6c01e04ce778f7d52c402a093b585002c78410",
+      "pdf_pages": 35,
+      "rendered_pages": 35,
+      "classification": "LEGACY_2025_ORGANIZER_REFERENCE",
+      "disposition": "NEW_LOCAL_FILE_MATCHING_SHIMO_NAME_AND_SIZE",
+      "comparison": {
+        "organizer_manifest_sha256_matches": [],
+        "organizer_manifest_name_and_size_matches": [],
+        "source_lock_sha256_matches": [],
+        "shimo_attachment_name_and_size_match": true,
+        "shimo_attachment_url": "https://uploader.shimo.im/f/U3Ae0DcOJCN2IC01.pdf"
+      },
+      "current_rule_copy_verification": null
+    },
+    {
+      "path": "AIC2025-智慧交通无人驾驶学习手册.pdf",
+      "size_bytes": 461935,
+      "sha256": "4fe04cafa219dd9e926e751a32c4ec875ebdced21fa4707434dc23af19108cdf",
+      "pdf_pages": 3,
+      "rendered_pages": 3,
+      "classification": "LEGACY_2025_RESOURCE_INDEX",
+      "disposition": "NEW_LOCAL_FILE_MATCHING_SHIMO_NAME_AND_SIZE",
+      "comparison": {
+        "organizer_manifest_sha256_matches": [],
+        "organizer_manifest_name_and_size_matches": [],
+        "source_lock_sha256_matches": [],
+        "shimo_attachment_name_and_size_match": true,
+        "shimo_attachment_url": "https://uploader.shimo.im/f/F6TI4QkL09wDEmk5.pdf"
+      },
+      "current_rule_copy_verification": null
+    },
+    {
+      "path": "[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf",
+      "size_bytes": 5675068,
+      "sha256": "ecfde46703eda96fa00c27c3e49723be211d609c88fdbca0befe5ebf5f256eed",
+      "pdf_pages": 14,
+      "rendered_pages": 14,
+      "classification": "LEGACY_2025_FIELD_REFERENCE",
+      "disposition": "NEW_LOCAL_FILE_MATCHING_SHIMO_NAME_AND_SIZE",
+      "comparison": {
+        "organizer_manifest_sha256_matches": [],
+        "organizer_manifest_name_and_size_matches": [],
+        "source_lock_sha256_matches": [],
+        "shimo_attachment_name_and_size_match": true,
+        "shimo_attachment_url": "https://uploader.shimo.im/f/vEyN8pjRzbeLyp4S.pdf"
+      },
+      "current_rule_copy_verification": null
+    },
+    {
+      "path": "11智慧城市无人驾驶算法应用赛.pdf",
+      "size_bytes": 776654,
+      "sha256": "41cd80412a740049f15bf02bc9f9ea28b9b89f96af1d8a4335fb750f98c03988",
+      "pdf_pages": 8,
+      "rendered_pages": 8,
+      "classification": "CURRENT_2026_RULES_BYTE_IDENTICAL_COPY",
+      "disposition": "DUPLICATE_OF_LOCKED_CURRENT_2026_RULES",
+      "comparison": {
+        "organizer_manifest_sha256_matches": [],
+        "organizer_manifest_name_and_size_matches": [],
+        "source_lock_sha256_matches": [
+          "smart_city_driverless_official_rules"
+        ],
+        "shimo_attachment_name_and_size_match": false,
+        "shimo_attachment_url": null
+      },
+      "current_rule_copy_verification": {
+        "locked_path": "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf",
+        "byte_identical": true,
+        "page_count_match": true,
+        "all_text_pages_match": true,
+        "all_rendered_pages_match": true,
+        "pages": [
+          {
+            "page": 1,
+            "normalized_text_sha256": "7d94217207dc87023e68041e5ccefb3e06df7ffab251968247e94b22a39a2065",
+            "locked_normalized_text_sha256": "7d94217207dc87023e68041e5ccefb3e06df7ffab251968247e94b22a39a2065",
+            "text_match": true,
+            "rendered_png_sha256": "3987fcbf7fff7321842509ec21145af0bc32018d87ad18004e9c507460aa0809",
+            "locked_rendered_png_sha256": "3987fcbf7fff7321842509ec21145af0bc32018d87ad18004e9c507460aa0809",
+            "render_match": true
+          },
+          {
+            "page": 2,
+            "normalized_text_sha256": "35bf1bb208313d96094ad7202f2b71d284c6f6cb1ece294bfa64253a6a5e8ddc",
+            "locked_normalized_text_sha256": "35bf1bb208313d96094ad7202f2b71d284c6f6cb1ece294bfa64253a6a5e8ddc",
+            "text_match": true,
+            "rendered_png_sha256": "d0bf117259f83937913e119592befac34309e78b4809c8f7d4adaafded324ef3",
+            "locked_rendered_png_sha256": "d0bf117259f83937913e119592befac34309e78b4809c8f7d4adaafded324ef3",
+            "render_match": true
+          },
+          {
+            "page": 3,
+            "normalized_text_sha256": "9485bb4a94938dc756462dfc4997d60b4a5ef1dbf5a765566f0595063cd81b9c",
+            "locked_normalized_text_sha256": "9485bb4a94938dc756462dfc4997d60b4a5ef1dbf5a765566f0595063cd81b9c",
+            "text_match": true,
+            "rendered_png_sha256": "0c04f35f9bcc28ad5598b4177acc59c3519fd664d2c578cb58f977fe14f8f5e2",
+            "locked_rendered_png_sha256": "0c04f35f9bcc28ad5598b4177acc59c3519fd664d2c578cb58f977fe14f8f5e2",
+            "render_match": true
+          },
+          {
+            "page": 4,
+            "normalized_text_sha256": "628f92b946b0b78af637f0ddc2db0a76f65d1662bf350c8b84946e2e3ab3e8b9",
+            "locked_normalized_text_sha256": "628f92b946b0b78af637f0ddc2db0a76f65d1662bf350c8b84946e2e3ab3e8b9",
+            "text_match": true,
+            "rendered_png_sha256": "88f70c194e818ef56e6b48b44637d776098cafc88c40050f3be0daa995bf58dd",
+            "locked_rendered_png_sha256": "88f70c194e818ef56e6b48b44637d776098cafc88c40050f3be0daa995bf58dd",
+            "render_match": true
+          },
+          {
+            "page": 5,
+            "normalized_text_sha256": "e7bde643e2dfab28e3040893327d76aed1b60f31fc16c12b1a72b318813c5a95",
+            "locked_normalized_text_sha256": "e7bde643e2dfab28e3040893327d76aed1b60f31fc16c12b1a72b318813c5a95",
+            "text_match": true,
+            "rendered_png_sha256": "60ed6ab9974d5bf0ecbff9aec28248f740f6124f4dc590ac2f88974a4e6dba07",
+            "locked_rendered_png_sha256": "60ed6ab9974d5bf0ecbff9aec28248f740f6124f4dc590ac2f88974a4e6dba07",
+            "render_match": true
+          },
+          {
+            "page": 6,
+            "normalized_text_sha256": "0e1d2e016939a26b86e834bbf305fea6782a432d0d16cd9097fc8d15a0ba090f",
+            "locked_normalized_text_sha256": "0e1d2e016939a26b86e834bbf305fea6782a432d0d16cd9097fc8d15a0ba090f",
+            "text_match": true,
+            "rendered_png_sha256": "c7963e47415aa449745684e7fb914a395c64224ad8df0eeabb218a3e28666684",
+            "locked_rendered_png_sha256": "c7963e47415aa449745684e7fb914a395c64224ad8df0eeabb218a3e28666684",
+            "render_match": true
+          },
+          {
+            "page": 7,
+            "normalized_text_sha256": "077265be4a93063975d193385f2a499bd4b05feec2de1e439683fe075d74209f",
+            "locked_normalized_text_sha256": "077265be4a93063975d193385f2a499bd4b05feec2de1e439683fe075d74209f",
+            "text_match": true,
+            "rendered_png_sha256": "ca69ca4d3f9d9828771795a0be561fb04edb529b55493a1f08f95537b4d38b5c",
+            "locked_rendered_png_sha256": "ca69ca4d3f9d9828771795a0be561fb04edb529b55493a1f08f95537b4d38b5c",
+            "render_match": true
+          },
+          {
+            "page": 8,
+            "normalized_text_sha256": "8bcc02c0a33d53201b0671ef55aefb0b9a5a4c05518aef73158b40f6e5136464",
+            "locked_normalized_text_sha256": "8bcc02c0a33d53201b0671ef55aefb0b9a5a4c05518aef73158b40f6e5136464",
+            "text_match": true,
+            "rendered_png_sha256": "f68af70aaf2a04d49bf63cd4f075be2e745a511594b77e459dc7d6a9f7b9a1d2",
+            "locked_rendered_png_sha256": "f68af70aaf2a04d49bf63cd4f075be2e745a511594b77e459dc7d6a9f7b9a1d2",
+            "render_match": true
+          }
+        ]
+      }
+    }
+  ]
+}

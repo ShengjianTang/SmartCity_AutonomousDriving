@@ -8,30 +8,30 @@
 
 | ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
 | --- | --- | --- | --- | --- |
-| B-001 | 最终地图 | 路径/状态/回放 | 只有规则示意和 2025 场地资料；需 2026 最终图纸 | REQUIRES_USER_FILE |
-| B-002 | 详细赛道图纸 | 场地建模/停车/岔路 | 需带尺寸、版本和发布日期的最终图纸 | REQUIRES_USER_FILE |
-| B-003 | 元素最终实物样式 | 类别/采集/识别 | 2025 标牌只作旧参考；需 2026 实物图或赛具 | REQUIRES_USER_FILE |
-| B-004 | 元素摆放规则 | 任务触发/局部规划 | 需最终布局说明 | REQUIRES_USER_FILE |
+| B-001 | 最终地图 | 路径/状态/回放 | 已取得 20250922 旧场地说明（4.7m×4.2m），但当前规则为约 4.5m×4.0m 且明确以赛期 QQ 群地图为准；仍需 2026 最终图纸 | REQUIRES_USER_FILE |
+| B-002 | 详细赛道图纸 | 场地建模/停车/岔路 | 旧场地 PDF 已登记；仍需带尺寸、版本和发布日期的 2026 最终图纸 | REQUIRES_USER_FILE |
+| B-003 | 元素最终实物样式 | 类别/采集/识别 | 2025 场地说明已补齐旧道具/标牌证据；仍需 2026 实物图或实际赛具 | REQUIRES_USER_FILE |
+| B-004 | 元素摆放规则 | 任务触发/局部规划 | 已知 2025 旧摆放示例，不得转入当前配置；需 2026 最终布局说明 | REQUIRES_USER_FILE |
 | B-005 | 赛区具体比赛形式 | 测试/提交 | 石墨有通知链接但本地未闭合当前赛区最终通知 | REQUIRES_USER_FILE |
-| B-006 | 官方赛具包情况 | 硬件/合规 | 已有旧赛事专用卡、镜像、控制板资料，但未证明对应当前整车 | PARTIALLY_RESOLVED |
+| B-006 | 官方赛具包情况 | 硬件/合规 | 已补 2025 技术分享/学习手册/场地说明和旧赛事专用卡资料，但车模组装视频仍缺失，且这些资料未证明对应当前整车 | PARTIALLY_RESOLVED |
 | B-007 | 官方基础工程 | 驱动/通信/部署 | 已有 2025 T710/FZ3B 工程；年份、目标板、依赖和许可证不足 | LEGACY_REFERENCE_ONLY |
 | B-008 | 官方训练数据 | 训练/验证 | 未发现可确认的数据集和授权 | STILL_BLOCKED |
 | B-009 | 官方模型 | 目标板推理 | 已登记 3 个 2025 旧模型，不能作为当前最终模型 | LEGACY_REFERENCE_ONLY |
-| B-010 | 官方计时接口 | 计时/比赛日志 | 当前规则与资料未给机器接口 | STILL_BLOCKED |
+| B-010 | 官方计时接口 | 计时/比赛日志 | 2025 场地说明给出磁感应线圈、RS485 模块和计时器旧接线/操作，但没有当前设备协议、数据格式或 Host 机器接口 | STILL_BLOCKED |
 
 ## 2. 计算单元（B-011—B-023）
 
 | ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
 | --- | --- | --- | --- | --- |
-| B-011 | 具体品牌和型号 | 全部板端集成 | T710/FZ3B 只出现在 2025 旧资料；需当前赛具铭牌/清单 | LEGACY_REFERENCE_ONLY |
+| B-011 | 具体品牌和型号 | 全部板端集成 | 2025 技术分享明确“T710 推荐、FZ3B 不推荐”，仅属旧推荐；需当前赛具铭牌/清单 | LEGACY_REFERENCE_ONLY |
 | B-012 | CPU 架构 | 交叉编译/部署 | 随包旧 ELF 为 AArch64；不等于当前板确认 | LEGACY_REFERENCE_ONLY |
 | B-013 | 系统镜像 | 部署/驱动 | 已有镜像烧写资料和大体积镜像工件，仍需确认板型/版本匹配 | PARTIALLY_RESOLVED |
-| B-014 | 操作系统 | 系统 API/服务 | 旧资料提供 Linux 线索；需目标机 `uname/os-release` 留档 | PARTIALLY_RESOLVED |
+| B-014 | 操作系统 | 系统 API/服务 | 2025 候选板页面明确 Ubuntu 18.04，仅属旧规格；需目标机 `uname -a` 与 `/etc/os-release` 留档 | PARTIALLY_RESOLVED |
 | B-015 | 目标编译器/ABI | 目标端构建 | Host Clang 21.1.0 仅用于 Windows；旧 AArch64 工件不可替代工具链 | LEGACY_REFERENCE_ONLY |
-| B-016 | AI 推理 SDK | OfficialInferenceBackend | 旧工程提到 PPNC/ONNX Runtime/Paddle Lite；需当前 SDK | LEGACY_REFERENCE_ONLY |
-| B-017 | 支持的模型格式 | 转换/加载 | 旧模型格式已登记，当前 SDK 支持范围未知 | LEGACY_REFERENCE_ONLY |
+| B-016 | AI 推理 SDK | OfficialInferenceBackend | 2025 技术分享描述 PPNC 编译/推理与 C++/Python API，旧工程另提 ONNX Runtime/Paddle Lite；需当前板 SDK/版本 | LEGACY_REFERENCE_ONLY |
+| B-017 | 支持的模型格式 | 转换/加载 | 2025 页面已登记 PaddleSeg/Clas/Detection/OCR 模型系列和旧模型工件；这不是当前 SDK 白名单，仍需当前版本清单 | LEGACY_REFERENCE_ONLY |
 | B-018 | 支持的算子 | 网络设计/转换 | 需当前 SDK 清单并在目标板实测 | REQUIRES_TARGET_HARDWARE |
-| B-019 | 模型转换工具 | 模型部署 | 有旧模型编译教程；需当前版本和可重现转换记录 | LEGACY_REFERENCE_ONLY |
+| B-019 | 模型转换工具 | 模型部署 | 2025 页面称 AiStudio 集成 PPNC 编译环境，且已有旧编译教程；仍需当前 PPNC 版本、工具哈希和可重现转换记录 | LEGACY_REFERENCE_ONLY |
 | B-020 | 相机接口 | CameraBackend | 旧工程/教程有接口线索，当前相机型号与格式未确认 | PARTIALLY_RESOLVED |
 | B-021 | 串口接口 | VehicleTransport | 旧工程与控制板教程有 USB/UART 线索，但版本/物理口未闭合 | PARTIALLY_RESOLVED |
 | B-022 | 设备节点 | 相机/串口启动 | 必须在目标机枚举并记录 | REQUIRES_TARGET_HARDWARE |
@@ -76,7 +76,7 @@
 
 | ID | 阻塞项 | 影响 | 当前证据与解锁条件 | 状态 |
 | --- | --- | --- | --- | --- |
-| B-049 | 最终类别列表 | 输出语义 | 2025 旧模型有 15/16 项标签；需 2026 最终定义 | REQUIRES_USER_FILE |
+| B-049 | 最终类别列表 | 输出语义 | 2025 技术分享含信号灯/连续弯道，当前表 2 含岔路；旧模型另有 15/16 项标签，三者不可混并，需 2026 最终类别定义 | REQUIRES_USER_FILE |
 | B-050 | 类别定义 | 标注/后处理 | 需边界情况和状态定义 | REQUIRES_USER_FILE |
 | B-051 | 标注格式 | 数据管线 | 无当前官方格式或获批团队规范 | STILL_BLOCKED |
 | B-052 | 训练集 | 模型训练 | 无合法、匹配当前赛具的数据 | STILL_BLOCKED |

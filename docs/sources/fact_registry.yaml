@@ -65,13 +65,13 @@ facts:
     last_verified: "2026-07-15"
     notes: "实车两圈能力未验证。"
   - fact_id: RULE-TASKS-001
-    statement: "规则列出测速、停车、斑马线/信号、道闸、施工区/锥桶、行人、岔路和终点等任务语义。"
+    statement: "当前规则列出测速、停车、斑马线/信号、道闸、施工区/锥桶、行人、岔路和终点等场景语义；其中表 2 的七个计分任务为施工区、停车场、道闸、岔路口、行人、测速响应和终点线。"
     source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
     source_page_or_location: "第 2-5 页"
     confidence: official
     status: VERIFIED
-    last_verified: "2026-07-15"
-    notes: "没有提供感知类别清单、阈值、训练数据或控制参数。"
+    last_verified: "2026-07-16"
+    notes: "第 7 页口播示例仍提到斑马线与信号灯得分，但表 2 未将其列为独立评分项；没有提供感知类别清单、阈值、训练数据或控制参数。"
   - fact_id: RULE-SPEED-001
     statement: "两个测速感应器之间行驶速度小于 0.5m/s 是测速响应得分条件。"
     source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
@@ -81,12 +81,12 @@ facts:
     last_verified: "2026-07-15"
     notes: "该数值不是电机控制参数。"
   - fact_id: RULE-SCORING-001
-    statement: "规则表 2 给出七项任务分值，表 3 给出技术汇报 20/40/20/20 分值。"
+    statement: "当前规则表 2 给出施工区、停车场、道闸、岔路口、行人、测速响应、终点线七项任务分值，表 3 给出技术汇报 20/40/20/20 分值。"
     source: "official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
     source_page_or_location: "第 5 页"
     confidence: official
     status: VERIFIED
-    last_verified: "2026-07-15"
+    last_verified: "2026-07-16"
     notes: "实际得分必须来自裁判记录。"
   - fact_id: RULE-OFFLINE-001
     statement: "线下任务环节共 10 分钟，重试时当前得分清零、扣分保留、计时不停。"
@@ -176,3 +176,75 @@ facts:
     status: IMPLEMENTED_UNVERIFIED
     last_verified: "2026-07-16"
     notes: "视频是 2025 示例，不是真实当前车载视频。"
+  - fact_id: DOC-AUDIT-FOUR-001
+    statement: "四份根目录 PDF 已完成定向增量审计：三份 2025 文件是现有组委会清单中未出现过的新本地文件，且文件名和大小分别精确匹配石墨附件索引；11智慧城市无人驾驶算法应用赛.pdf 是当前已锁定官方规则的字节级重复副本。"
+    source: "docs/sources/four_new_documents_incremental_audit.json"
+    source_page_or_location: "documents 与 scope"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-16"
+    notes: "只读取四份 PDF、当前锁定规则和既有小型索引，未重扫或重算 114GB 资料；原始 PDF 未修改。"
+  - fact_id: RULE-COPY-2026-001
+    statement: "根目录 11智慧城市无人驾驶算法应用赛.pdf 与 official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf 的整文件 SHA-256、字节内容、8 页规范化文本哈希和 8 页 Poppler 渲染哈希全部一致。"
+    source: "11智慧城市无人驾驶算法应用赛.pdf"
+    source_page_or_location: "全文件及第 1-8 页；docs/sources/four_new_documents_incremental_audit.json"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-16"
+    notes: "可认定为已锁定当前 2026 官方规则的内容副本；该结论来自与既有官方下载件比对，不把用户提供路径当作独立来源证明。"
+  - fact_id: LEGACY-TECHSHARE-2025-001
+    statement: "2025 技术分享在第 22 页明确写出 T710 推荐、FZ3B 不推荐；第 28 页描述一块候选 Edgeboard 的接口、Ubuntu 18.04、3.2TOPs@int8 以及 PPNC 编译/推理能力。"
+    source: "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf"
+    source_page_or_location: "第 22、28 页"
+    confidence: organizer_legacy
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "分类 LEGACY_2025_ORGANIZER_REFERENCE；推荐关系、板卡规格和系统版本都不能用来认定当前 2026 目标板。"
+  - fact_id: LEGACY-PPNC-2025-001
+    statement: "2025 技术分享将 PPNC 描述为支持模型编译和推理、提供 C++/Python API 的工具链，并按 PaddleSeg、PaddleClas、PaddleDetection、PaddleOCR 四个系列列出支持模型。"
+    source: "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf"
+    source_page_or_location: "第 28 页；models/official/metadata/model_registry.yaml 的 legacy_capability_evidence"
+    confidence: organizer_legacy
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "列表仅证明旧候选板/旧 PPNC 页面声称的支持范围，不证明当前 SDK、版本、算子覆盖或仓库内模型已可运行。"
+  - fact_id: LEGACY-ARCH-2025-001
+    statement: "2025 技术分享给出旧车模电子架构和 Frame-ICAR 软件架构：Edgeboard 与基于 MCU 的 MotionController 通信，旧软件包含预处理、逆透视、OpenCV/Paddle 预测、FSM、姿态/速度控制和下位机链路。"
+    source: "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf"
+    source_page_or_location: "第 27、30-31 页"
+    confidence: organizer_legacy
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "旧图中的电源、接口、状态名、目录和控制链只作架构证据，不进入正式硬件或控制配置。"
+  - fact_id: LEGACY-MANUAL-2025-001
+    statement: "AIC2025 学习手册是一份 3 页资源索引，列出镜像烧录、远程连接、车模组装、开源代码、智控板、模型训练、模型编译和场地资料八部分。"
+    source: "AIC2025-智慧交通无人驾驶学习手册.pdf"
+    source_page_or_location: "第 2-3 页"
+    confidence: organizer_legacy
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "分类 LEGACY_2025_RESOURCE_INDEX；它不是当前硬件/协议/模型规格书，车模组装视频实体仍未取得。"
+  - fact_id: LEGACY-FIELD-2025-001
+    statement: "20250922 旧场地说明给出 4.7m×4.2m 两块底布、路肩/道闸/感应器/控制器/路牌/行人/锥桶/裁判系统，以及磁感应线圈起止计时的旧场地布置。"
+    source: "[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf"
+    source_page_or_location: "第 3、7-14 页"
+    confidence: organizer_legacy
+    status: REFERENCE_ONLY
+    last_verified: "2026-07-16"
+    notes: "分类 LEGACY_2025_FIELD_REFERENCE；旧道具数量、坐标/距离、接线和计时细节不进入当前正式配置。"
+  - fact_id: VERSION-CONFLICT-TASKS-001
+    statement: "2025 技术分享的任务/评分包含信号灯和连续弯道鸣笛，而当前规则表 2 包含岔路口任务且未把连续弯道列为计分项。"
+    source: "2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf; official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "2025 第 12、14、19 页；当前第 4-5 页"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-16"
+    notes: "版本差异必须保留；不得把 2025 任务标签或触发规则并入当前配置。"
+  - fact_id: VERSION-CONFLICT-FIELD-001
+    statement: "20250922 旧场地说明写明 4.7m×4.2m；当前规则写明场地约 4.5m×4.0m，并要求以赛期 QQ 群发布的具体地图样式为准。"
+    source: "[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf; official/public/rules/智慧城市无人驾驶算法应用赛_官方规则.pdf"
+    source_page_or_location: "旧说明第 3 页；当前规则第 1-2 页"
+    confidence: measured
+    status: VERIFIED
+    last_verified: "2026-07-16"
+    notes: "2025 尺寸不能写入当前地图配置；2026 最终地图仍是阻塞项。"

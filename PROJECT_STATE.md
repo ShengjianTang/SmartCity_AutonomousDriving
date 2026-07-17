@@ -1,8 +1,8 @@
 # PROJECT_STATE
 
-- 更新时间：2026-07-16T15:48:31+08:00
+- 更新时间：2026-07-16T17:05:12+08:00
 - Git 分支：`audit/organizer-materials-integration`
-- 本轮基线 commit：`9d9b624f1fa10e57bdd6e592a685656a1b93b8d6`
+- 本轮基线 commit：`3885bb18f522bb801520d3d36bba3306cc263af6`
 - 需求矩阵：35 项（`VERIFIED` 4、`IMPLEMENTED_UNVERIFIED` 4、`BLOCKED` 23、`NOT_STARTED` 4）
 - 阻塞清单：58 项，0 项真正解除
 
@@ -13,6 +13,7 @@
 ## VERIFIED
 
 - 官网赛题页和 8 页规则 PDF 的 HTTP、SHA-256、解析与全页渲染。
+- 四份根目录 PDF 定向增量审计：三份 2025 文件首次本地出现并匹配石墨文件名/大小；`11智慧城市无人驾驶算法应用赛.pdf` 与锁定当前规则整文件、字节和 8 页文本/渲染哈希全部一致。
 - 组委会原始投放 33 文件、22,960,347,578 字节；12 个压缩包完整性/路径安全检查及隔离解压，失败 0。
 - 清理后 manifest 为 1,146 文件、114,392,868,846 字节；清理只移除核准元数据和可再生临时文件。
 - 石墨公开页元数据/内容快照与 12 个附件索引；附件防盗链阻塞按事实记录，未绕过。
@@ -42,6 +43,7 @@
 ## REFERENCE_ONLY / REJECTED
 
 - 组委会 2025 T710/FZ3B 工程、模型、场地图和示例视频：`REFERENCE_ONLY`；未复制源码/协议实现。
+- 新增 2025 技术分享、学习手册、场地铺设说明分别按 `LEGACY_2025_ORGANIZER_REFERENCE`、`LEGACY_2025_RESOURCE_INDEX`、`LEGACY_2025_FIELD_REFERENCE` 登记；T710/FZ3B 推荐、Ubuntu 18.04、PPNC、旧架构/场地/计时均未进入正式配置。
 - `third_party/IntelligentCar_Baidu` commit `be05851d04154d374e46687e10809e13e997f712`：`REFERENCE_ONLY`，许可证未确认。
 - Kesci 2018 其他比赛仓库：`REJECTED`，未依赖。
 
@@ -55,7 +57,8 @@
 | 模型登记 | 3 个逻辑模型、21 个工件；ONNX checker PASS×2 |
 | 实际视频 dry-run | exit 0；189 帧；正常 EOF；只写 RecordingTransport |
 | 清理后全量 manifest | exit 0；1,146 文件；114,392,868,846 字节 |
+| 四文档增量审计 | 4/4 PDF 可解析；60/60 输入页渲染目视通过；当前规则 8/8 文本与渲染页匹配 |
 
 ## 下一步
 
-用户应优先按 `USER_INPUT_REQUIRED.md` 补组装视频/学习手册、当前赛具/目标板证据、匹配 MCU 工程与协议，然后提供最终地图/类别/数据和全部标定记录。资料不足时仍可继续增强纯 Host 测试与审计工具，但不能安全完成实车功能。
+用户应优先按 `USER_INPUT_REQUIRED.md` 补车模组装视频、当前赛具/目标板证据、匹配 MCU 工程与协议；学习手册、2025 场地说明和技术分享已经补齐，不需重复提供。随后还需 2026 最终地图/类别、合法数据/模型和全部实车标定记录。资料不足时仍可继续增强纯 Host 测试与审计工具，但不能安全完成实车功能。

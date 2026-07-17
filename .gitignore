@@ -70,3 +70,8 @@ third_party/IntelligentCar_Baidu/
 
 # User-provided root copy is byte-identical to the locked official copy.
 /11智慧城市无人驾驶算法应用赛.pdf
+
+# User-provided legacy PDFs are audited in place; keep raw originals out of Git.
+/2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf
+/AIC2025-智慧交通无人驾驶学习手册.pdf
+/[[]智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf

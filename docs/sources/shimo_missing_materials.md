@@ -11,18 +11,13 @@
 - 建议文件名：保留石墨原始文件名，不要重命名；若原名无法保留，可用 `车模组装视频教程_原始文件名待确认.<ext>`。
 - 放置目录：`official/organizer_drop/hardware/vehicle_assembly/`。
 
-### AIC2025 学习手册原 PDF
+## 本轮已补齐、不再缺失
 
-- 页面附件：`AIC2025-智慧交通无人驾驶学习手册.pdf`，页面声明大小 `461,935` 字节，URL `https://uploader.shimo.im/f/F6TI4QkL09wDEmk5.pdf`。
-- 状态：`ACCESS_BLOCKED`。直接只读请求返回 260,725 字节 PNG 防盗链占位图，不是 PDF；没有绕过。
-- 获取方式：在石墨原文件中点击附件后使用正常下载/导出功能。
-- 放置目录：`official/organizer_drop/notices/shimo_index/`。
-- 用途：只用于确认八类资料入口和旧资料结构，保持 `LEGACY_2025_REFERENCE`。
+- `AIC2025-智慧交通无人驾驶学习手册.pdf`：461,935 字节，SHA-256 `4fe04cafa219dd9e926e751a32c4ec875ebdced21fa4707434dc23af19108cdf`，分类 `LEGACY_2025_RESOURCE_INDEX`。
+- `[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf`：5,675,068 字节，SHA-256 `ecfde46703eda96fa00c27c3e49723be211d609c88fdbca0befe5ebf5f256eed`，分类 `LEGACY_2025_FIELD_REFERENCE`。
+- `2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf`：3,897,010 字节，SHA-256 `1189095a336f5f97877fe7e48a6c01e04ce778f7d52c402a093b585002c78410`，分类 `LEGACY_2025_ORGANIZER_REFERENCE`。
 
-## 与技术审计直接相关、建议补充
-
-- `[智慧城市无人驾驶算法应用赛]场地铺设说明20250922.pdf`（页面大小 `5,675,068` 字节，`https://uploader.shimo.im/f/vEyN8pjRzbeLyp4S.pdf`），放入 `official/organizer_drop/maps/场地资料/`。它仍是 2025 资料，只用于旧场地审计。
-- `2025-AIC-智慧城市无人驾驶算法应用赛-技术分享.-20250914-2.pdf`（`3,897,010` 字节，`https://uploader.shimo.im/f/U3Ae0DcOJCN2IC01.pdf`），放入 `official/organizer_drop/notices/shimo_index/`，用途仅旧培训参考。
+三份文件均保留在用户投放的根目录，未覆盖或移动；文件名和大小精确匹配石墨索引，完整哈希来自本地原文件。它们已完成内容审计，不需要再次下载。
 
 ## 页面存在但不阻塞当前 Host/离线闭环的旧归档
 
